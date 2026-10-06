@@ -1,69 +1,91 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useState } from "react";
+import { Storage, Project } from "@/lib/storage";
+import { v4 as uuidv4 } from "uuid";
+import Link from "next/link";
+import { Folder, Plus, ArrowRight } from "lucide-react";
 
 export default function Home() {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [newProjectName, setNewProjectName] = useState("");
+
+  useEffect(() => {
+    setProjects(Storage.getProjects());
+  }, []);
+
+  const handleCreateProject = () => {
+    if (!newProjectName.trim()) return;
+    const p: Project = {
+      id: uuidv4(),
+      name: newProjectName,
+      createdAt: Date.now(),
+    };
+    Storage.saveProject(p);
+    setProjects(Storage.getProjects());
+    setNewProjectName("");
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+    <div className="min-h-screen bg-neutral-950 text-white p-8">
+      <div className="max-w-5xl mx-auto space-y-12">
+        <header className="flex justify-between items-end">
+          <div>
+            <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+              MCQ Generator
+            </h1>
+            <p className="text-neutral-400 mt-2">Manage and create AI-powered question sets</p>
+          </div>
+        </header>
+
+        <section className="bg-neutral-900 rounded-2xl p-6 border border-neutral-800">
+          <h2 className="text-xl font-semibold mb-4">Create New Project</h2>
+          <div className="flex gap-4">
+            <input
+              type="text"
+              value={newProjectName}
+              onChange={(e) => setNewProjectName(e.target.value)}
+              placeholder="e.g., Biology Midterms"
+              className="flex-1 bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+            <button
+              onClick={handleCreateProject}
+              className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-lg font-medium flex items-center gap-2 transition-all"
+            >
+              <Plus size={18} /> Create
+            </button>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+            <Folder className="text-blue-400" /> Your Projects
+          </h2>
+          {projects.length === 0 ? (
+            <div className="text-center py-12 text-neutral-500 bg-neutral-900/50 rounded-2xl border border-neutral-800 border-dashed">
+              No projects yet. Create one above to get started.
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.map((p) => (
+                <Link
+                  href={`/project/${p.id}`}
+                  key={p.id}
+                  className="group bg-neutral-900 border border-neutral-800 p-6 rounded-2xl hover:border-blue-500/50 hover:bg-neutral-800/80 transition-all cursor-pointer relative overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all">
+                    <ArrowRight className="text-blue-400" size={20} />
+                  </div>
+                  <h3 className="text-lg font-medium mb-2 pr-8">{p.name}</h3>
+                  <p className="text-sm text-neutral-500">
+                    Created {new Date(p.createdAt).toLocaleDateString()}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          )}
+        </section>
+      </div>
     </div>
   );
 }
