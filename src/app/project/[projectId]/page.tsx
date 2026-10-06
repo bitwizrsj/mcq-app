@@ -3,7 +3,7 @@
 import { useEffect, useState, use } from "react";
 import { Storage, Project, MCQSet } from "@/lib/storage";
 import Link from "next/link";
-import { FileQuestion, Plus, ArrowLeft } from "lucide-react";
+import { FileQuestion, Plus, ArrowLeft, Share2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export default function ProjectPage({ params }: { params: Promise<{ projectId: string }> }) {
@@ -22,6 +22,18 @@ export default function ProjectPage({ params }: { params: Promise<{ projectId: s
     setProject(p);
     setMcqSets(Storage.getMCQSets(projectId));
   }, [projectId, router]);
+
+  const generatePin = (setId: string) => {
+    const set = Storage.getMCQSet(setId);
+    if (!set) return;
+    
+    // Generate random 6 character alphanumeric PIN
+    const pin = Math.random().toString(36).substring(2, 8).toUpperCase();
+    const updatedSet = { ...set, sharePin: pin };
+    
+    Storage.saveMCQSet(updatedSet);
+    setMcqSets(Storage.getMCQSets(projectId));
+  };
 
   if (!project) return null;
 
@@ -55,8 +67,26 @@ export default function ProjectPage({ params }: { params: Promise<{ projectId: s
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {mcqSets.map((set) => (
-                <div key={set.id} className="bg-white border border-gray-200 p-5 rounded-sm shadow-sm flex flex-col hover:shadow-md transition-shadow">
-                  <h3 className="text-base font-semibold mb-2 text-gray-800">{set.title}</h3>
+                <div key={set.id} className="bg-white border border-gray-200 p-5 rounded-sm shadow-sm flex flex-col hover:shadow-md transition-shadow relative group">
+                  
+                  {/* Share PIN Section */}
+                  <div className="absolute top-4 right-4">
+                    {set.sharePin ? (
+                      <div className="bg-gray-100 border border-gray-200 text-gray-800 text-xs font-bold px-2 py-1 rounded-sm shadow-sm font-mono tracking-widest flex items-center gap-1 cursor-help" title="Share this PIN with others">
+                        PIN: {set.sharePin}
+                      </div>
+                    ) : (
+                      <button
+                        onClick={() => generatePin(set.id)}
+                        className="text-gray-400 hover:text-[#0067b8] transition-colors p-1"
+                        title="Generate Share PIN"
+                      >
+                        <Share2 size={16} />
+                      </button>
+                    )}
+                  </div>
+
+                  <h3 className="text-base font-semibold mb-2 text-gray-800 pr-16">{set.title}</h3>
                   <div className="text-xs text-gray-500 mb-4 space-y-1.5 flex-1">
                     <p><span className="font-medium text-gray-700">Topic:</span> {set.topic}</p>
                     <p><span className="font-medium text-gray-700">Level:</span> <span className="capitalize">{set.level}</span></p>
