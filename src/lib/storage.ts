@@ -13,6 +13,11 @@ export interface MCQSet {
   count: number;
   questions: Question[];
   createdAt: number;
+  progress?: {
+    currentIndex: number;
+    selectedOptions: Record<number, number>;
+    showNotes: Record<number, boolean>;
+  };
 }
 
 export interface Question {

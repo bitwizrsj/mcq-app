@@ -35,7 +35,7 @@ export default function CreateMCQPage({ params }: { params: Promise<{ projectId:
       });
 
       if (!response.ok) {
-        throw new Error("Failed to generate MCQs. Check your Grok API key or try again.");
+        throw new Error("Failed to generate MCQs. Check your Gemini API key or try again.");
       }
 
       const data = await response.json();
@@ -69,93 +69,99 @@ export default function CreateMCQPage({ params }: { params: Promise<{ projectId:
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white p-8">
-      <div className="max-w-3xl mx-auto space-y-8">
-        <header>
-          <Link href={`/project/${projectId}`} className="inline-flex items-center text-neutral-400 hover:text-white transition-colors mb-6 text-sm">
-            <ArrowLeft size={16} className="mr-2" /> Back to Project
-          </Link>
-          <div>
-            <h1 className="text-3xl font-bold">Generate MCQ Set</h1>
-            <p className="text-neutral-400 mt-2">Powered by Gemini AI</p>
-          </div>
-        </header>
+    <div className="min-h-screen bg-[#faf9f8] text-gray-900 font-sans">
+      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
+        <Link href={`/project/${projectId}`} className="text-gray-500 hover:text-gray-800 transition-colors">
+          <ArrowLeft size={20} />
+        </Link>
+        <h1 className="text-xl font-semibold text-gray-800">Generate MCQ Set</h1>
+      </header>
 
-        <form onSubmit={handleGenerate} className="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl space-y-6">
+      <div className="w-full px-6 py-8">
+        <form onSubmit={handleGenerate} className="bg-white border border-gray-200 p-6 rounded-sm shadow-sm max-w-2xl">
+          <div className="mb-6 border-b border-gray-200 pb-4">
+            <h2 className="text-base font-semibold text-gray-800">Configuration</h2>
+            <p className="text-xs text-gray-500 mt-1">Powered by Gemini AI</p>
+          </div>
+
           {error && (
-            <div className="bg-red-500/10 border border-red-500/50 text-red-400 p-4 rounded-lg text-sm">
+            <div className="bg-[#fde7e9] border border-[#d13438] text-[#d13438] p-3 rounded-sm text-sm mb-6 flex items-center">
               {error}
             </div>
           )}
           
-          <div>
-            <label className="block text-sm font-medium text-neutral-300 mb-2">Set Title</label>
-            <input
-              type="text"
-              required
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              placeholder="e.g., Chapter 1 Quiz"
-              className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-neutral-300 mb-2">Topic or Prompt</label>
-            <textarea
-              required
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-              placeholder="Describe what the questions should be about..."
-              rows={4}
-              className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
-            />
-          </div>
-
-          <div className="grid grid-cols-2 gap-6">
+          <div className="space-y-5">
             <div>
-              <label className="block text-sm font-medium text-neutral-300 mb-2">Number of Questions</label>
-              <select
-                value={count}
-                onChange={(e) => setCount(Number(e.target.value))}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all appearance-none"
-              >
-                <option value={20}>20 Questions</option>
-                <option value={30}>30 Questions</option>
-                <option value={50}>50 Questions</option>
-              </select>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">Set Title</label>
+              <input
+                type="text"
+                required
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="e.g., Chapter 1 Quiz"
+                className="w-full bg-white border border-gray-300 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-[#0067b8] focus:ring-1 focus:ring-[#0067b8] transition-colors"
+              />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-neutral-300 mb-2">Difficulty Level</label>
-              <select
-                value={level}
-                onChange={(e) => setLevel(e.target.value)}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all appearance-none"
-              >
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-                <option value="easy-to-hard">Easy to Hard</option>
-              </select>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">Topic or Prompt</label>
+              <textarea
+                required
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+                placeholder="Describe what the questions should be about..."
+                rows={4}
+                className="w-full bg-white border border-gray-300 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-[#0067b8] focus:ring-1 focus:ring-[#0067b8] transition-colors resize-none"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Number of Questions</label>
+                <select
+                  value={count}
+                  onChange={(e) => setCount(Number(e.target.value))}
+                  className="w-full bg-white border border-gray-300 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-[#0067b8] focus:ring-1 focus:ring-[#0067b8] transition-colors appearance-none"
+                >
+                  <option value={20}>20 Questions</option>
+                  <option value={30}>30 Questions</option>
+                  <option value={50}>50 Questions</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Difficulty Level</label>
+                <select
+                  value={level}
+                  onChange={(e) => setLevel(e.target.value)}
+                  className="w-full bg-white border border-gray-300 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-[#0067b8] focus:ring-1 focus:ring-[#0067b8] transition-colors appearance-none"
+                >
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                  <option value="easy-to-hard">Easy to Hard</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <button
-            type="submit"
-            disabled={isGenerating}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
-          >
-            {isGenerating ? (
-              <>
-                <Loader2 size={20} className="animate-spin" /> Generating with AI...
-              </>
-            ) : (
-              <>
-                <Sparkles size={20} /> Generate MCQs
-              </>
-            )}
-          </button>
+          <div className="mt-8 pt-6 border-t border-gray-200">
+            <button
+              type="submit"
+              disabled={isGenerating}
+              className="bg-[#0067b8] hover:bg-[#005da6] text-white px-5 py-2.5 rounded-sm text-sm font-medium flex items-center justify-center gap-2 transition-colors disabled:opacity-70 disabled:cursor-not-allowed shadow-sm w-full sm:w-auto"
+            >
+              {isGenerating ? (
+                <>
+                  <Loader2 size={16} className="animate-spin" /> Generating with AI...
+                </>
+              ) : (
+                <>
+                  <Sparkles size={16} /> Generate MCQs
+                </>
+              )}
+            </button>
+          </div>
         </form>
       </div>
     </div>

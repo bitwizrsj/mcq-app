@@ -11,7 +11,11 @@ export async function POST(req: Request) {
       );
     }
 
-    const { topic, count, level } = await req.json();
+    const { topic, count, level, existingQuestions = [] } = await req.json();
+
+    const avoidPrompt = existingQuestions.length > 0 
+      ? `\n\nCRITICAL: Do NOT generate any questions that are similar to these existing ones:\n${existingQuestions.map((q: string) => "- " + q).join("\n")}`
+      : "";
 
     const systemPrompt = `You are an expert educational content creator. Your task is to generate Multiple Choice Questions (MCQs) based on the user's prompt. 
 You must return the output STRICTLY as a JSON array of objects. Do not include markdown formatting like \`\`\`json or any other text.
@@ -24,7 +28,7 @@ Each object in the array must have the following structure:
   "notes": "Detailed notes or explanation on why this is correct and others are wrong."
 }
 Make sure you generate exactly ${count} questions. The difficulty level should be: ${level}.
-Topic: ${topic}`;
+Topic: ${topic}${avoidPrompt}`;
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
     

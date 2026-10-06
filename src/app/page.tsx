@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Storage, Project } from "@/lib/storage";
 import { v4 as uuidv4 } from "uuid";
 import Link from "next/link";
-import { Folder, Plus, ArrowRight } from "lucide-react";
+import { Folder, Plus, ChevronRight } from "lucide-react";
 
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -27,57 +27,52 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white p-8">
-      <div className="max-w-5xl mx-auto space-y-12">
-        <header className="flex justify-between items-end">
-          <div>
-            <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-              MCQ Generator
-            </h1>
-            <p className="text-neutral-400 mt-2">Manage and create AI-powered question sets</p>
-          </div>
-        </header>
+    <div className="min-h-screen bg-[#faf9f8] text-gray-900 font-sans">
+      <header className="bg-white border-b border-gray-200 px-6 py-4">
+        <h1 className="text-xl font-semibold text-gray-800">MCQ Generator</h1>
+      </header>
 
-        <section className="bg-neutral-900 rounded-2xl p-6 border border-neutral-800">
-          <h2 className="text-xl font-semibold mb-4">Create New Project</h2>
-          <div className="flex gap-4">
+      <div className="w-full px-6 py-8">
+        <div className="mb-8 p-6 bg-white border border-gray-200 shadow-sm rounded-sm">
+          <h2 className="text-lg font-semibold mb-4 text-gray-800">Create New Project</h2>
+          <div className="flex flex-col sm:flex-row gap-3">
             <input
               type="text"
               value={newProjectName}
               onChange={(e) => setNewProjectName(e.target.value)}
               placeholder="e.g., Biology Midterms"
-              className="flex-1 bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+              className="flex-1 bg-white border border-gray-300 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-[#0067b8] focus:ring-1 focus:ring-[#0067b8] transition-colors"
             />
             <button
               onClick={handleCreateProject}
-              className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-lg font-medium flex items-center gap-2 transition-all"
+              className="bg-[#0067b8] hover:bg-[#005da6] text-white px-5 py-2 rounded-sm text-sm font-medium flex items-center justify-center gap-2 transition-colors"
             >
-              <Plus size={18} /> Create
+              <Plus size={16} /> Create
             </button>
           </div>
-        </section>
+        </div>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-            <Folder className="text-blue-400" /> Your Projects
+          <h2 className="text-lg font-semibold mb-4 text-gray-800 flex items-center gap-2">
+            <Folder size={20} className="text-[#0067b8]" /> Your Projects
           </h2>
           {projects.length === 0 ? (
-            <div className="text-center py-12 text-neutral-500 bg-neutral-900/50 rounded-2xl border border-neutral-800 border-dashed">
+            <div className="text-center py-12 text-gray-500 bg-white shadow-sm rounded-sm border border-gray-200 border-dashed">
               No projects yet. Create one above to get started.
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {projects.map((p) => (
                 <Link
                   href={`/project/${p.id}`}
                   key={p.id}
-                  className="group bg-neutral-900 border border-neutral-800 p-6 rounded-2xl hover:border-blue-500/50 hover:bg-neutral-800/80 transition-all cursor-pointer relative overflow-hidden"
+                  className="group bg-white border border-gray-200 p-5 rounded-sm shadow-sm hover:shadow-md transition-shadow cursor-pointer relative"
                 >
-                  <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all">
-                    <ArrowRight className="text-blue-400" size={20} />
+                  <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ChevronRight className="text-[#0067b8]" size={18} />
                   </div>
-                  <h3 className="text-lg font-medium mb-2 pr-8">{p.name}</h3>
-                  <p className="text-sm text-neutral-500">
+                  <h3 className="text-base font-semibold mb-1 text-gray-800 pr-6">{p.name}</h3>
+                  <p className="text-xs text-gray-500">
                     Created {new Date(p.createdAt).toLocaleDateString()}
                   </p>
                 </Link>
