@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, use } from "react";
-import { Storage, MCQSet, Question } from "@/lib/storage";
-import { v4 as uuidv4 } from "uuid";
+import { DB } from "@/lib/db";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Loader2, Sparkles } from "lucide-react";
@@ -11,118 +10,107 @@ export default function CreateMCQPage({ params }: { params: Promise<{ projectId:
   const router = useRouter();
   const { projectId } = use(params);
   
-  const [title, setTitle] = useState("");
   const [topic, setTopic] = useState("");
-  const [count, setCount] = useState(20);
-  const [level, setLevel] = useState("easy");
+  const [count, setCount] = useState(10);
+  const [level, setLevel] = useState("Medium");
+  
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState("");
 
-  const handleGenerate = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!title || !topic) {
-      setError("Please fill in all required fields.");
+  const handleGenerate = async () => {
+    if (!topic.trim()) {
+      setError("Please enter a topic.");
       return;
     }
-    setError("");
+    
     setIsGenerating(true);
+    setError("");
 
     try {
       const response = await fetch("/api/generate-mcq", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ topic, count, level }),
+        body: JSON.stringify({ topic, count, level })
       });
 
       if (!response.ok) {
-        throw new Error("Failed to generate MCQs. Check your Gemini API key or try again.");
+        throw new Error("Failed to generate questions. Please try again.");
       }
 
       const data = await response.json();
-      const questions: Question[] = data.questions.map((q: any) => ({
-        id: uuidv4(),
+      
+      const shortTopic = topic.length > 50 ? topic.substring(0, 50) + '...' : topic;
+      const newSet = await DB.createMCQSet({
+        project_id: projectId,
+        title: `${shortTopic} (${level})`,
+        topic: shortTopic,
+        level,
+        count: data.questions.length
+      });
+
+      if (!newSet) throw new Error("Failed to save MCQ Set to database.");
+
+      const questionsToSave = data.questions.map((q: any) => ({
+        set_id: newSet.id,
         text: q.text,
         options: q.options,
-        correctOptionIndex: q.correctOptionIndex,
+        correct_option_index: q.correctOptionIndex,
         solution: q.solution,
-        notes: q.notes,
+        notes: q.notes
       }));
 
-      const newSet: MCQSet = {
-        id: uuidv4(),
-        projectId,
-        title,
-        topic,
-        level,
-        count: questions.length,
-        questions,
-        createdAt: Date.now(),
-      };
+      const success = await DB.createQuestions(questionsToSave);
+      if (!success) throw new Error("Failed to save questions to database.");
 
-      Storage.saveMCQSet(newSet);
       router.push(`/project/${projectId}`);
     } catch (err: any) {
-      setError(err.message);
-    } finally {
+      setError(err.message || "An error occurred.");
       setIsGenerating(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#faf9f8] text-gray-900 font-sans">
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
-        <Link href={`/project/${projectId}`} className="text-gray-500 hover:text-gray-800 transition-colors">
-          <ArrowLeft size={20} />
-        </Link>
-        <h1 className="text-xl font-semibold text-gray-800">Generate MCQ Set</h1>
+    <div className="min-h-screen bg-[#f8f9fc] text-gray-900 font-sans text-[13px]">
+      <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center sticky top-0 z-50">
+        <div className="flex items-center gap-3">
+          <Link href={`/project/${projectId}`} className="p-1 hover:bg-gray-100 rounded-sm text-gray-500 hover:text-gray-800 transition-colors">
+            <ArrowLeft size={16} />
+          </Link>
+          <div className="h-4 w-[1px] bg-gray-200 mx-1"></div>
+          <h1 className="text-[15px] font-bold text-gray-800 flex items-center gap-1.5">
+            <Sparkles className="text-blue-600" size={16} /> Generate Questions
+          </h1>
+        </div>
       </header>
 
-      <div className="w-full px-6 py-8">
-        <form onSubmit={handleGenerate} className="bg-white border border-gray-200 p-6 rounded-sm shadow-sm max-w-2xl">
-          <div className="mb-6 border-b border-gray-200 pb-4">
-            <h2 className="text-base font-semibold text-gray-800">Configuration</h2>
-            <p className="text-xs text-gray-500 mt-1">Powered by Gemini AI</p>
-          </div>
-
-          {error && (
-            <div className="bg-[#fde7e9] border border-[#d13438] text-[#d13438] p-3 rounded-sm text-sm mb-6 flex items-center">
-              {error}
-            </div>
-          )}
+      <div className="w-full max-w-xl mx-auto px-6 py-8">
+        <div className="bg-white border border-gray-200 p-6 rounded-md shadow-sm relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full -z-0"></div>
           
-          <div className="space-y-5">
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">Set Title</label>
-              <input
-                type="text"
-                required
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                placeholder="e.g., Chapter 1 Quiz"
-                className="w-full bg-white border border-gray-300 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-[#0067b8] focus:ring-1 focus:ring-[#0067b8] transition-colors"
-              />
-            </div>
+          <h2 className="text-lg font-bold mb-1 text-gray-900 relative z-10">AI Generator</h2>
+          <p className="text-[13px] text-gray-500 mb-6 relative z-10">Define your topic and let our AI craft the perfect multiple-choice questions.</p>
 
+          <div className="space-y-5 relative z-10">
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">Topic or Prompt</label>
+              <label className="block text-[12px] font-bold text-gray-700 mb-1.5 uppercase tracking-wider">Topic / Prompt</label>
               <textarea
-                required
                 value={topic}
                 onChange={(e) => setTopic(e.target.value)}
-                placeholder="Describe what the questions should be about..."
-                rows={4}
-                className="w-full bg-white border border-gray-300 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-[#0067b8] focus:ring-1 focus:ring-[#0067b8] transition-colors resize-none"
+                placeholder="e.g., Python Generators and Iterators..."
+                className="w-full bg-gray-50 border border-gray-200 rounded-sm px-3 py-2 text-[13px] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all min-h-[100px] resize-y"
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Number of Questions</label>
+                <label className="block text-[12px] font-bold text-gray-700 mb-1.5 uppercase tracking-wider">Count</label>
                 <select
                   value={count}
                   onChange={(e) => setCount(Number(e.target.value))}
-                  className="w-full bg-white border border-gray-300 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-[#0067b8] focus:ring-1 focus:ring-[#0067b8] transition-colors appearance-none"
+                  className="w-full bg-gray-50 border border-gray-200 rounded-sm px-3 py-2 text-[13px] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                 >
+                  <option value={5}>5 Questions</option>
+                  <option value={10}>10 Questions</option>
                   <option value={20}>20 Questions</option>
                   <option value={30}>30 Questions</option>
                   <option value={50}>50 Questions</option>
@@ -130,39 +118,41 @@ export default function CreateMCQPage({ params }: { params: Promise<{ projectId:
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Difficulty Level</label>
+                <label className="block text-[12px] font-bold text-gray-700 mb-1.5 uppercase tracking-wider">Difficulty</label>
                 <select
                   value={level}
                   onChange={(e) => setLevel(e.target.value)}
-                  className="w-full bg-white border border-gray-300 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-[#0067b8] focus:ring-1 focus:ring-[#0067b8] transition-colors appearance-none"
+                  className="w-full bg-gray-50 border border-gray-200 rounded-sm px-3 py-2 text-[13px] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                 >
-                  <option value="easy">Easy</option>
-                  <option value="medium">Medium</option>
-                  <option value="hard">Hard</option>
-                  <option value="easy-to-hard">Easy to Hard</option>
+                  <option value="Easy">Easy</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Hard">Hard</option>
+                  <option value="Easy-To-Hard">Easy to Hard</option>
                 </select>
               </div>
             </div>
-          </div>
 
-          <div className="mt-8 pt-6 border-t border-gray-200">
+            {error && <p className="text-red-600 text-[12px] font-bold p-2 bg-red-50 rounded-sm border border-red-100">{error}</p>}
+
             <button
-              type="submit"
+              onClick={handleGenerate}
               disabled={isGenerating}
-              className="bg-[#0067b8] hover:bg-[#005da6] text-white px-5 py-2.5 rounded-sm text-sm font-medium flex items-center justify-center gap-2 transition-colors disabled:opacity-70 disabled:cursor-not-allowed shadow-sm w-full sm:w-auto"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-sm text-[13px] font-bold flex justify-center items-center gap-2 transition-all shadow-sm disabled:opacity-70 mt-2"
             >
               {isGenerating ? (
                 <>
-                  <Loader2 size={16} className="animate-spin" /> Generating with AI...
+                  <Loader2 className="animate-spin" size={16} />
+                  Generating...
                 </>
               ) : (
                 <>
-                  <Sparkles size={16} /> Generate MCQs
+                  <Sparkles size={16} />
+                  Generate Questions
                 </>
               )}
             </button>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

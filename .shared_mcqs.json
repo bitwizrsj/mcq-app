@@ -1,0 +1,1438 @@
+{
+  "NJTN3J": {
+    "id": "32970446-df67-482c-b204-b873d3c50ce0",
+    "projectId": "2be2a981-5673-44e1-a81b-541463d5495f",
+    "title": "sql",
+    "topic": "from zero to expert level all",
+    "level": "easy-to-hard",
+    "count": 50,
+    "questions": [
+      {
+        "id": "dd3a5312-035e-4568-a545-570cebb2b2cb",
+        "text": "What is the primary color obtained by mixing red and yellow?",
+        "options": [
+          "Green",
+          "Orange",
+          "Purple",
+          "Brown"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The primary color obtained by mixing red and yellow is orange.",
+        "notes": "Mixing two primary colors creates a secondary color. Red and yellow are primary colors, and their combination results in orange."
+      },
+      {
+        "id": "0f1a8649-8eaa-4111-97ad-4d4625b96247",
+        "text": "Which planet is known as the 'Red Planet'?",
+        "options": [
+          "Venus",
+          "Mars",
+          "Jupiter",
+          "Saturn"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "Mars is known as the 'Red Planet'.",
+        "notes": "Mars gets its reddish hue from iron oxide (rust) on its surface, earning it the nickname 'Red Planet'."
+      },
+      {
+        "id": "1e76c576-c63c-4ae6-b376-9b0f5b9c511a",
+        "text": "What is the chemical symbol for water?",
+        "options": [
+          "O2",
+          "CO2",
+          "H2O",
+          "NaCl"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The chemical symbol for water is H2O.",
+        "notes": "H2O represents two hydrogen atoms bonded with one oxygen atom, forming a water molecule."
+      },
+      {
+        "id": "d77ca0d5-d7a1-4e8e-a726-fbc24e7d55e3",
+        "text": "How many continents are there on Earth?",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "There are 7 continents on Earth.",
+        "notes": "The seven continents are Asia, Africa, North America, South America, Antarctica, Europe, and Australia."
+      },
+      {
+        "id": "dced3c28-d8aa-4980-b882-1f78a546175e",
+        "text": "Which animal lays eggs?",
+        "options": [
+          "Cat",
+          "Dog",
+          "Chicken",
+          "Cow"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "A chicken lays eggs.",
+        "notes": "Chickens are birds and reproduce by laying eggs. Cats, dogs, and cows are mammals and give birth to live young."
+      },
+      {
+        "id": "eb67faa8-2b49-4507-84d8-d7a01d9d425f",
+        "text": "What is the capital city of France?",
+        "options": [
+          "Rome",
+          "Berlin",
+          "Paris",
+          "London"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The capital city of France is Paris.",
+        "notes": "Paris is the largest city in France and its political, economic, and cultural center."
+      },
+      {
+        "id": "75c75496-5d59-4437-b87e-41e6df374a1d",
+        "text": "What is the largest ocean on Earth?",
+        "options": [
+          "Atlantic Ocean",
+          "Indian Ocean",
+          "Southern Ocean",
+          "Pacific Ocean"
+        ],
+        "correctOptionIndex": 3,
+        "solution": "The largest ocean on Earth is the Pacific Ocean.",
+        "notes": "The Pacific Ocean covers about one-third of the surface of the Earth and contains more than half of the free water on Earth."
+      },
+      {
+        "id": "d5f6cf5c-53f0-4910-ad1f-1634909958b1",
+        "text": "Which gas do plants absorb from the atmosphere for photosynthesis?",
+        "options": [
+          "Oxygen",
+          "Nitrogen",
+          "Carbon Dioxide",
+          "Hydrogen"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Plants absorb carbon dioxide from the atmosphere for photosynthesis.",
+        "notes": "During photosynthesis, plants use sunlight, water, and carbon dioxide to create glucose (sugar) for energy and release oxygen as a byproduct."
+      },
+      {
+        "id": "f3767c4f-4ca9-467a-8442-256099aec7df",
+        "text": "Who painted the Mona Lisa?",
+        "options": [
+          "Vincent van Gogh",
+          "Pablo Picasso",
+          "Leonardo da Vinci",
+          "Claude Monet"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Leonardo da Vinci painted the Mona Lisa.",
+        "notes": "The Mona Lisa is a half-length portrait painting by Italian artist Leonardo da Vinci, considered an archetypal masterpiece of the Italian Renaissance."
+      },
+      {
+        "id": "811abffe-8019-4f86-8094-cba8eaf79aa3",
+        "text": "What is the result of 5 + 3 * 2?",
+        "options": [
+          "16",
+          "11",
+          "13",
+          "10"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The result of 5 + 3 * 2 is 11.",
+        "notes": "Following the order of operations (PEMDAS/BODMAS), multiplication is performed before addition: 3 * 2 = 6, then 5 + 6 = 11."
+      },
+      {
+        "id": "46b6ddc5-6168-4b80-a6e5-31042dfd43f9",
+        "text": "Which of these is a prime number?",
+        "options": [
+          "4",
+          "6",
+          "7",
+          "9"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "7 is a prime number.",
+        "notes": "A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. 4 is divisible by 2, 6 by 2 and 3, and 9 by 3."
+      },
+      {
+        "id": "44600653-a509-4486-8bb1-f66f7eff741e",
+        "text": "In computing, what does 'CPU' stand for?",
+        "options": [
+          "Central Processing Unit",
+          "Computer Personal Unit",
+          "Central Peripheral Unit",
+          "Control Program Utility"
+        ],
+        "correctOptionIndex": 0,
+        "solution": "'CPU' stands for Central Processing Unit.",
+        "notes": "The CPU is the electronic circuitry within a computer that carries out the instructions of a computer program by performing the basic arithmetic, logic, controlling, and input/output (I/O) operations."
+      },
+      {
+        "id": "00f116e4-7f20-4c11-b892-89987d997357",
+        "text": "Which historical event marked the beginning of World War I?",
+        "options": [
+          "Attack on Pearl Harbor",
+          "Assassination of Archduke Franz Ferdinand",
+          "Fall of the Berlin Wall",
+          "Signing of the Treaty of Versailles"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The assassination of Archduke Franz Ferdinand marked the beginning of World War I.",
+        "notes": "The assassination of Archduke Franz Ferdinand of Austria by a Serbian nationalist in Sarajevo in June 1914 is widely considered the spark that ignited World War I."
+      },
+      {
+        "id": "bbdc5b28-07ac-48a2-a324-3470919c7d06",
+        "text": "What is the main function of red blood cells?",
+        "options": [
+          "Fighting infections",
+          "Clotting blood",
+          "Transporting oxygen",
+          "Producing antibodies"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The main function of red blood cells is transporting oxygen.",
+        "notes": "Red blood cells contain hemoglobin, a protein that binds to oxygen in the lungs and releases it in tissues throughout the body."
+      },
+      {
+        "id": "daaf3aaf-17b0-4b31-ac73-f42df8696a38",
+        "text": "Which of the following is an example of a renewable energy source?",
+        "options": [
+          "Coal",
+          "Natural Gas",
+          "Solar Power",
+          "Petroleum"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Solar power is an example of a renewable energy source.",
+        "notes": "Renewable energy sources are naturally replenished on a human timescale, such as sunlight, wind, rain, tides, waves, and geothermal heat. Coal, natural gas, and petroleum are fossil fuels, which are non-renewable."
+      },
+      {
+        "id": "e34e2d93-3b25-48db-8f83-d870c75fcc26",
+        "text": "What is the square root of 81?",
+        "options": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The square root of 81 is 9.",
+        "notes": "The square root of a number is a value that, when multiplied by itself, gives the original number. 9 multiplied by 9 equals 81."
+      },
+      {
+        "id": "095e6c22-340a-46a0-ad29-3ecebcca6e3f",
+        "text": "Which literary device involves a contrast between what is said and what is actually meant?",
+        "options": [
+          "Metaphor",
+          "Simile",
+          "Irony",
+          "Alliteration"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Irony involves a contrast between what is said and what is actually meant.",
+        "notes": "Irony is a figure of speech in which words are used in such a way that their intended meaning is different from the actual meaning of the words. It may also be a situation that ends up in a very different way than what was originally anticipated."
+      },
+      {
+        "id": "77aed72c-7ad7-4910-abbd-213c57b01613",
+        "text": "What is the pH value of a neutral solution?",
+        "options": [
+          "0",
+          "7",
+          "14",
+          "Between 0 and 7"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The pH value of a neutral solution is 7.",
+        "notes": "The pH scale ranges from 0 to 14. A pH of 7 is neutral, a pH less than 7 is acidic, and a pH greater than 7 is basic (alkaline)."
+      },
+      {
+        "id": "0bfb6b95-8a5e-4f37-a30a-5a2e91ff911d",
+        "text": "Which famous scientist developed the theory of relativity?",
+        "options": [
+          "Isaac Newton",
+          "Niels Bohr",
+          "Albert Einstein",
+          "Marie Curie"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Albert Einstein developed the theory of relativity.",
+        "notes": "Albert Einstein's theory of relativity revolutionized physics by proposing that space and time are relative and that the speed of light is constant for all observers."
+      },
+      {
+        "id": "59b40bbb-6515-4b5d-9159-e08cf8c8c5d1",
+        "text": "In which year did humans first land on the Moon?",
+        "options": [
+          "1959",
+          "1965",
+          "1969",
+          "1972"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Humans first landed on the Moon in 1969.",
+        "notes": "Apollo 11, with astronauts Neil Armstrong and Buzz Aldrin, successfully landed on the Moon on July 20, 1969."
+      },
+      {
+        "id": "d01e1623-625a-4873-a2a9-bcacd3290b6f",
+        "text": "What is the SI unit of electric current?",
+        "options": [
+          "Volt",
+          "Ohm",
+          "Amperes",
+          "Watt"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The SI unit of electric current is Amperes.",
+        "notes": "The ampere (A) is the SI unit of electric current. Volts measure electric potential difference, Ohms measure electrical resistance, and Watts measure power."
+      },
+      {
+        "id": "1b05b056-3350-45b8-96c4-2a570a11fb1c",
+        "text": "Which philosophical concept refers to the idea that knowledge comes primarily from sensory experience?",
+        "options": [
+          "Rationalism",
+          "Empiricism",
+          "Idealism",
+          "Skepticism"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "Empiricism refers to the idea that knowledge comes primarily from sensory experience.",
+        "notes": "Empiricism emphasizes the role of experience and evidence, especially sensory perception, in the formation of ideas, over the notion of innate ideas or tradition."
+      },
+      {
+        "id": "1c21c2d6-b0b2-4a9e-9801-d337821ddef8",
+        "text": "What is the common name for the chemical compound sodium chloride?",
+        "options": [
+          "Baking Soda",
+          "Table Salt",
+          "Sugar",
+          "Vinegar"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The common name for the chemical compound sodium chloride is table salt.",
+        "notes": "Sodium chloride (NaCl) is an ionic compound that is essential for life and is widely used as a seasoning and preservative."
+      },
+      {
+        "id": "e5a84907-8add-4072-b641-ae76370ca6d4",
+        "text": "Which of these programming languages is primarily used for web development, specifically for creating interactive front-end experiences?",
+        "options": [
+          "Python",
+          "Java",
+          "C++",
+          "JavaScript"
+        ],
+        "correctOptionIndex": 3,
+        "solution": "JavaScript is primarily used for web development, specifically for creating interactive front-end experiences.",
+        "notes": "JavaScript is a high-level, interpreted scripting language that conforms to the ECMAScript specification. It's best known as the scripting language for Web pages, but it's also used in many non-browser environments."
+      },
+      {
+        "id": "8c843195-fa1d-4245-a57e-6e3598efaf9b",
+        "text": "What is the fundamental theorem of calculus?",
+        "options": [
+          "It relates the derivative of a function to its integral.",
+          "It states that every non-constant single-variable polynomial with complex coefficients has at least one complex root.",
+          "It defines the properties of limits and continuity.",
+          "It describes the relationship between the sides of a right-angled triangle."
+        ],
+        "correctOptionIndex": 0,
+        "solution": "The Fundamental Theorem of Calculus relates the derivative of a function to its integral.",
+        "notes": "The Fundamental Theorem of Calculus is a theorem that links the concept of differentiating a function with the concept of integrating a function. It has two parts, showing that differentiation and integration are inverse operations."
+      },
+      {
+        "id": "2e48b5bb-8cfc-425c-a7a7-4082e1c1c902",
+        "text": "Which economic theory advocates for minimal government intervention in the economy, allowing free markets to self-regulate?",
+        "options": [
+          "Keynesianism",
+          "Socialism",
+          "Laissez-faire",
+          "Communism"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Laissez-faire advocates for minimal government intervention in the economy, allowing free markets to self-regulate.",
+        "notes": "Laissez-faire is an economic system in which transactions between private parties are free from government intervention such as regulation, privileges, tariffs, and subsidies."
+      },
+      {
+        "id": "c6dece83-dc09-4049-b6d1-76af7ed52e0c",
+        "text": "What is the primary function of the mitochondria in a cell?",
+        "options": [
+          "Protein synthesis",
+          "Waste removal",
+          "Energy production",
+          "Genetic information storage"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The primary function of the mitochondria in a cell is energy production.",
+        "notes": "Mitochondria are known as the 'powerhouses' of the cell because they generate most of the cell's supply of adenosine triphosphate (ATP), used as a source of chemical energy."
+      },
+      {
+        "id": "d821b03a-0253-4543-8ae5-ec41f3d08244",
+        "text": "Which famous battle in 1066 led to the Norman conquest of England?",
+        "options": [
+          "Battle of Hastings",
+          "Battle of Agincourt",
+          "Battle of Waterloo",
+          "Battle of Stamford Bridge"
+        ],
+        "correctOptionIndex": 0,
+        "solution": "The Battle of Hastings in 1066 led to the Norman conquest of England.",
+        "notes": "The Battle of Hastings was fought on 14 October 1066 between the Norman-French army of William, Duke of Normandy, and an English army under the Anglo-Saxon King Harold Godwinson, beginning the Norman conquest."
+      },
+      {
+        "id": "09bdd8f6-8e12-4c13-93c9-c841bb3fe275",
+        "text": "What is the name of the phenomenon where light bends as it passes from one medium to another?",
+        "options": [
+          "Reflection",
+          "Diffraction",
+          "Refraction",
+          "Interference"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The phenomenon where light bends as it passes from one medium to another is called refraction.",
+        "notes": "Refraction is the change in direction of a wave passing from one medium to another or from a gradual change in the medium. This effect is most easily seen when a wave passes from one medium to another at an angle."
+      },
+      {
+        "id": "bad646a3-23e3-4125-8158-fab71f43deca",
+        "text": "In object-oriented programming, what is 'encapsulation'?",
+        "options": [
+          "The ability of an object to take on many forms.",
+          "The process of creating new classes from existing classes.",
+          "Bundling data and methods that operate on the data within a single unit.",
+          "Allowing objects of different classes to be treated as objects of a common superclass."
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Encapsulation in object-oriented programming is bundling data and methods that operate on the data within a single unit.",
+        "notes": "Encapsulation restricts direct access to some of an object's components, which is a means of preventing accidental interference and misuse of the object's data."
+      },
+      {
+        "id": "731c7d6b-d536-44af-b84c-e51d521c3aa6",
+        "text": "Who formulated the three laws of planetary motion?",
+        "options": [
+          "Nicolaus Copernicus",
+          "Galileo Galilei",
+          "Johannes Kepler",
+          "Tycho Brahe"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Johannes Kepler formulated the three laws of planetary motion.",
+        "notes": "Kepler's laws describe the motion of planets around the Sun, forming a foundational element in the history of astronomy and physics."
+      },
+      {
+        "id": "2c90eb7e-ef0b-48da-8c14-66511a59b4e0",
+        "text": "Which philosophical school, founded by Zeno of Citium, emphasized virtue, reason, and living in harmony with nature?",
+        "options": [
+          "Epicureanism",
+          "Skepticism",
+          "Stoicism",
+          "Platonism"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Stoicism, founded by Zeno of Citium, emphasized virtue, reason, and living in harmony with nature.",
+        "notes": "Stoicism teaches the development of self-control and fortitude as a means of overcoming destructive emotions; the philosophy holds that becoming a clear and unbiased thinker allows one to understand universal reason."
+      },
+      {
+        "id": "9217203e-7596-4101-9aed-2fde4121d754",
+        "text": "What is the primary characteristic of a 'black hole' in astrophysics?",
+        "options": [
+          "It emits extremely bright light.",
+          "It is a region of spacetime where gravity is so strong that nothing, not even light, can escape.",
+          "It is a type of star that has exhausted its fuel.",
+          "It is a large cloud of gas and dust in space."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "A black hole is a region of spacetime where gravity is so strong that nothing, not even light, can escape.",
+        "notes": "Black holes are formed from the remnants of massive stars that collapse under their own gravity. Their boundary, beyond which no escape is possible, is called the event horizon."
+      },
+      {
+        "id": "6b49b46a-f2e6-422d-bec1-31d72798764a",
+        "text": "In computer networking, what is the purpose of a DNS server?",
+        "options": [
+          "To assign IP addresses to devices on a network.",
+          "To translate domain names into IP addresses.",
+          "To route data packets between networks.",
+          "To provide secure encrypted connections."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The purpose of a DNS server is to translate domain names into IP addresses.",
+        "notes": "DNS (Domain Name System) servers translate human-readable domain names (like www.example.com) into machine-readable IP addresses (like 192.0.2.1), allowing web browsers to locate and access websites."
+      },
+      {
+        "id": "ff0aa0a4-3f2d-480c-90ea-3dc3d5c488b3",
+        "text": "Which mathematical concept is used to find the area under a curve?",
+        "options": [
+          "Differentiation",
+          "Integration",
+          "Algebra",
+          "Trigonometry"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "Integration is used to find the area under a curve.",
+        "notes": "Integral calculus is the branch of calculus concerned with the study of integrals and their properties. The integral of a function can be interpreted as the area of the region under the graph of the function."
+      },
+      {
+        "id": "3d65fceb-4cdc-44ad-9332-9846e2f73cfc",
+        "text": "What is the 'Dunning-Kruger effect' in psychology?",
+        "options": [
+          "A cognitive bias where people overestimate their ability in areas where they have little expertise.",
+          "A phenomenon where individuals perform better in the presence of others.",
+          "The tendency to interpret new evidence as confirmation of one's existing beliefs.",
+          "A type of memory loss caused by trauma."
+        ],
+        "correctOptionIndex": 0,
+        "solution": "The Dunning-Kruger effect is a cognitive bias where people overestimate their ability in areas where they have little expertise.",
+        "notes": "The Dunning-Kruger effect describes how people with low ability in a certain area often overestimate their competence because they lack the metacognitive ability to recognize their own ineptitude."
+      },
+      {
+        "id": "b742693f-a116-451c-9651-d1814a9a1faf",
+        "text": "Which branch of physics deals with the behavior of matter and energy at the atomic and subatomic levels?",
+        "options": [
+          "Classical Mechanics",
+          "Thermodynamics",
+          "Electromagnetism",
+          "Quantum Mechanics"
+        ],
+        "correctOptionIndex": 3,
+        "solution": "Quantum Mechanics deals with the behavior of matter and energy at the atomic and subatomic levels.",
+        "notes": "Quantum mechanics is a fundamental theory in physics that provides a description of the physical properties of nature at the scale of atoms and subatomic particles. Classical mechanics describes the world at macroscopic scales."
+      },
+      {
+        "id": "56c16550-d2dc-41f6-a062-beed1f1907fe",
+        "text": "What is the 'Turing Test' in Artificial Intelligence?",
+        "options": [
+          "A test to measure the processing speed of a computer.",
+          "A test of a machine's ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human.",
+          "A method for training neural networks.",
+          "A benchmark for robotic locomotion."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The Turing Test is a test of a machine's ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human.",
+        "notes": "Proposed by Alan Turing in 1950, the test involves a human interrogator trying to distinguish between a human and a machine based on their textual responses to questions."
+      },
+      {
+        "id": "96218933-4d67-490e-b83a-a573c195b465",
+        "text": "Which of these is NOT a core principle of Agile software development?",
+        "options": [
+          "Individuals and interactions over processes and tools",
+          "Working software over comprehensive documentation",
+          "Customer collaboration over contract negotiation",
+          "Strict adherence to a detailed initial plan"
+        ],
+        "correctOptionIndex": 3,
+        "solution": "Strict adherence to a detailed initial plan is NOT a core principle of Agile software development.",
+        "notes": "Agile methodologies prioritize responding to change over following a plan, emphasizing flexibility and iterative development. The other options are core values from the Agile Manifesto."
+      },
+      {
+        "id": "49ff84dc-c347-4273-81c2-1cace3863362",
+        "text": "What is the 'Heisenberg Uncertainty Principle'?",
+        "options": [
+          "The principle that energy cannot be created or destroyed.",
+          "The principle that it is impossible to simultaneously know precisely both the position and momentum of a particle.",
+          "The principle that the speed of light is constant for all observers.",
+          "The principle that all particles exhibit wave-like properties."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The Heisenberg Uncertainty Principle states that it is impossible to simultaneously know precisely both the position and momentum of a particle.",
+        "notes": "This fundamental principle of quantum mechanics implies that the more precisely one property (like position) is measured, the less precisely the other property (like momentum) can be known, and vice versa."
+      },
+      {
+        "id": "d6656dc3-062e-440b-98a1-1a240fd77bdc",
+        "text": "In advanced statistics, what does 'p-value' represent?",
+        "options": [
+          "The probability of making a Type I error (false positive).",
+          "The probability of making a Type II error (false negative).",
+          "The probability of observing data as extreme as, or more extreme than, the observed data, assuming the null hypothesis is true.",
+          "The strength of the relationship between two variables."
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The p-value represents the probability of observing data as extreme as, or more extreme than, the observed data, assuming the null hypothesis is true.",
+        "notes": "A low p-value (typically ≤ 0.05) suggests that the observed data is unlikely under the null hypothesis, leading to its rejection. It does not directly represent the probability of the null hypothesis being true or the probability of errors."
+      },
+      {
+        "id": "1826c53e-dbd6-4a23-9bd0-2f3e0384b9b8",
+        "text": "Which concept in database management systems ensures that database transactions are processed reliably, specifically regarding Atomicity, Consistency, Isolation, and Durability?",
+        "options": [
+          "Normalization",
+          "Indexing",
+          "ACID properties",
+          "Concurrency Control"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The ACID properties ensure that database transactions are processed reliably.",
+        "notes": "ACID (Atomicity, Consistency, Isolation, Durability) is a set of properties that guarantee that database transactions are processed reliably. Atomicity ensures all or nothing, Consistency ensures valid state, Isolation ensures concurrent transactions don't interfere, and Durability ensures committed transactions persist."
+      },
+      {
+        "id": "52cd2ce2-0ca6-489b-a1c4-f8a1c5517ed8",
+        "text": "What is the 'Schrödinger's Cat' thought experiment used to illustrate?",
+        "options": [
+          "The theory of general relativity.",
+          "The concept of quantum superposition and the measurement problem in quantum mechanics.",
+          "The existence of parallel universes.",
+          "The effects of gravity on time dilation."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The 'Schrödinger's Cat' thought experiment is used to illustrate the concept of quantum superposition and the measurement problem in quantum mechanics.",
+        "notes": "The thought experiment presents a cat in a sealed box with a device that has a 50% chance of killing it. According to quantum mechanics, until the box is opened, the cat is simultaneously both alive and dead (in a superposition of states), highlighting the bizarre nature of quantum reality and the role of observation."
+      },
+      {
+        "id": "16768cdc-dd71-4acd-803a-cb02f12ace8c",
+        "text": "In cryptography, what is the primary advantage of asymmetric-key encryption (public-key cryptography) over symmetric-key encryption?",
+        "options": [
+          "It is generally faster for bulk data encryption.",
+          "It requires only one key for both encryption and decryption.",
+          "It solves the key exchange problem by allowing secure communication without prior sharing of a secret key.",
+          "It provides stronger protection against brute-force attacks."
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The primary advantage of asymmetric-key encryption is that it solves the key exchange problem by allowing secure communication without prior sharing of a secret key.",
+        "notes": "Asymmetric-key encryption uses a pair of keys: a public key for encryption and a private key for decryption. This eliminates the need for parties to securely exchange a shared secret key beforehand, which is a major challenge in symmetric-key systems."
+      },
+      {
+        "id": "6c0ea5b4-d1cc-41c7-8f93-bac76315fda6",
+        "text": "Which type of artificial neural network is particularly well-suited for processing sequential data like natural language or time series?",
+        "options": [
+          "Convolutional Neural Networks (CNNs)",
+          "Recurrent Neural Networks (RNNs)",
+          "Feedforward Neural Networks (FNNs)",
+          "Generative Adversarial Networks (GANs)"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "Recurrent Neural Networks (RNNs) are particularly well-suited for processing sequential data like natural language or time series.",
+        "notes": "RNNs are designed to recognize patterns in sequences of data. They have internal memory that allows them to process inputs in sequence, unlike FNNs. CNNs are typically used for image processing, and GANs for generating new data."
+      },
+      {
+        "id": "6cbf08ef-d7d5-4d22-8c7e-32931c66ba58",
+        "text": "What is the 'Arrow's Impossibility Theorem' in social choice theory?",
+        "options": [
+          "It states that it is impossible to have a perfectly fair voting system when there are three or more alternatives.",
+          "It describes the conditions under which a market equilibrium exists.",
+          "It proves that economic growth is always possible with sufficient innovation.",
+          "It demonstrates that perfect information is unobtainable in any economic system."
+        ],
+        "correctOptionIndex": 0,
+        "solution": "Arrow's Impossibility Theorem states that it is impossible to have a perfectly fair voting system when there are three or more alternatives.",
+        "notes": "Kenneth Arrow's theorem demonstrates that no ranked voting system can convert ranked preferences of individuals into a community-wide (aggregate) ranking while also satisfying a set of seemingly desirable criteria: non-dictatorship, unrestricted domain, Pareto efficiency, and independence of irrelevant alternatives."
+      },
+      {
+        "id": "c101a7fa-0dc0-4a3d-bfde-6df22160a092",
+        "text": "In quantum field theory, what are 'virtual particles'?",
+        "options": [
+          "Particles that exist only in computer simulations.",
+          "Particles that can travel faster than the speed of light.",
+          "Particles that exist for a fleeting moment, mediating fundamental interactions, and cannot be directly observed.",
+          "Particles that have zero mass and charge."
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Virtual particles are particles that exist for a fleeting moment, mediating fundamental interactions, and cannot be directly observed.",
+        "notes": "Virtual particles are a manifestation of the Heisenberg Uncertainty Principle; they exist for such short durations that they 'borrow' energy from the vacuum, mediating forces (like photons for electromagnetism) but are not directly detectable as free particles."
+      },
+      {
+        "id": "8dc69e97-2ce1-4913-8332-3511b514bda3",
+        "text": "Which mathematical concept deals with the study of continuity, connectedness, and limits in abstract spaces, generalizing concepts from calculus?",
+        "options": [
+          "Linear Algebra",
+          "Number Theory",
+          "Topology",
+          "Combinatorics"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Topology deals with the study of continuity, connectedness, and limits in abstract spaces.",
+        "notes": "Topology is a major area of mathematics concerned with the properties of space that are preserved under continuous deformations, such as stretching, twisting, crumpling, and bending, but not tearing or gluing."
+      },
+      {
+        "id": "2d7c9dbe-4367-4e44-beea-c2800db4f891",
+        "text": "What is 'Blockchain' technology fundamentally designed to do?",
+        "options": [
+          "Store large amounts of unstructured data.",
+          "Provide a centralized, highly secure database for financial institutions.",
+          "Create a decentralized, immutable, and transparent ledger for transactions.",
+          "Enable faster internet browsing speeds."
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Blockchain technology is fundamentally designed to create a decentralized, immutable, and transparent ledger for transactions.",
+        "notes": "A blockchain is a distributed ledger technology that records transactions in 'blocks' linked together chronologically and secured with cryptography. Its decentralized nature and immutability make it suitable for cryptocurrencies and other secure record-keeping."
+      },
+      {
+        "id": "23601572-3795-49d0-acd6-6423d120975d",
+        "text": "In advanced physics, what is the 'Many-Worlds Interpretation' of quantum mechanics?",
+        "options": [
+          "The idea that quantum particles can exist in multiple locations simultaneously.",
+          "The theory that every quantum measurement causes the universe to split into multiple parallel universes, each representing a different outcome.",
+          "A hypothesis suggesting that the universe is just one of many in a multiverse.",
+          "The concept that space-time is fundamentally discrete rather than continuous."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The Many-Worlds Interpretation is the theory that every quantum measurement causes the universe to split into multiple parallel universes, each representing a different outcome.",
+        "notes": "Proposed by Hugh Everett III, this interpretation posits that the universal wavefunction is objectively real and that there is no wavefunction collapse. Instead, all possible outcomes of quantum measurements are realized in different 'branches' of the universe."
+      }
+    ],
+    "createdAt": 1791254405936,
+    "sharePin": "NJTN3J"
+  },
+  "RRFGMQ": {
+    "id": "9708b91f-708c-4ab5-89a7-bf1eb2a3c204",
+    "projectId": "2be2a981-5673-44e1-a81b-541463d5495f",
+    "title": "java",
+    "topic": "java all topics from basic to advanced",
+    "level": "easy-to-hard",
+    "count": 58,
+    "questions": [
+      {
+        "id": "3b215cf4-e064-4884-89d0-6147856386ef",
+        "text": "What is the primary function of the `public static void main(String[] args)` method in a Java application?",
+        "options": [
+          "It declares a public static variable.",
+          "It is the entry point for the JVM to start execution of the program.",
+          "It defines a constructor for the main class.",
+          "It handles exceptions thrown by the program."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `public static void main(String[] args)` method serves as the entry point for the Java Virtual Machine (JVM) to begin executing a Java application.",
+        "notes": "The JVM looks for this specific signature to start the program. `public` makes it accessible from anywhere, `static` allows it to be called without creating an object, `void` indicates it doesn't return a value, and `String[] args` allows command-line arguments to be passed."
+      },
+      {
+        "id": "7daf46f5-57f6-4ecd-8d33-66a9e5a62be4",
+        "text": "Which of the following is NOT a primitive data type in Java?",
+        "options": [
+          "int",
+          "boolean",
+          "String",
+          "char"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "`String` is not a primitive data type in Java.",
+        "notes": "`String` is a class in Java and is part of the `java.lang` package. `int`, `boolean`, and `char` are primitive data types."
+      },
+      {
+        "id": "d5d3aa57-2f20-40b6-8fa0-65e6dd01a7ed",
+        "text": "Which keyword is used to prevent a class from being subclassed?",
+        "options": [
+          "static",
+          "abstract",
+          "final",
+          "private"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The `final` keyword is used to prevent a class from being subclassed.",
+        "notes": "When a class is declared `final`, it cannot be extended by any other class, meaning no other class can inherit from it. `static` is for members, `abstract` implies it must be subclassed, and `private` restricts access but doesn't prevent subclassing in the same way."
+      },
+      {
+        "id": "df58ef88-2a63-47d6-9f27-f21233b3d0e7",
+        "text": "What is the output of the following Java code snippet?\n```java\nint x = 5;\nSystem.out.println(x++);\n```",
+        "options": [
+          "5",
+          "6",
+          "4",
+          "Error"
+        ],
+        "correctOptionIndex": 0,
+        "solution": "The output will be `5`.",
+        "notes": "The `x++` (post-increment) operator means the value of `x` is used first, and then `x` is incremented. So, `5` is printed, and then `x` becomes `6`."
+      },
+      {
+        "id": "7f404fda-e2c7-4b94-b107-64cf1018711c",
+        "text": "Which of the following control flow statements executes a block of code at least once?",
+        "options": [
+          "for loop",
+          "while loop",
+          "do-while loop",
+          "if-else statement"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The `do-while` loop is guaranteed to execute its block of code at least once.",
+        "notes": "In a `do-while` loop, the condition is checked after the loop body has executed, ensuring at least one iteration. `for` and `while` loops check the condition before the first iteration."
+      },
+      {
+        "id": "b2560969-1a38-448d-9aff-0daf5bedadd3",
+        "text": "How do you declare an array of 5 integers in Java?",
+        "options": [
+          "int[] arr = new int[5];",
+          "int arr[5];",
+          "int arr = new int[5];",
+          "int arr[] = {1,2,3,4,5};"
+        ],
+        "correctOptionIndex": 0,
+        "solution": "The correct way to declare an array of 5 integers is `int[] arr = new int[5];`.",
+        "notes": "The syntax `int[] arr` declares `arr` as an array of integers, and `new int[5]` allocates memory for 5 integer elements, initializing them to their default value (0 for `int`). Option D initializes with specific values, but isn't the general declaration for a fixed size."
+      },
+      {
+        "id": "d0d7ddb9-9411-4b86-919c-c9f3703a4a13",
+        "text": "What is the default value of a boolean variable in Java?",
+        "options": [
+          "true",
+          "false",
+          "null",
+          "0"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The default value of a boolean variable in Java is `false`.",
+        "notes": "Instance variables and static variables of primitive types are automatically initialized to their default values. For `boolean`, it's `false`. Local variables, however, must be explicitly initialized."
+      },
+      {
+        "id": "841e8359-aea4-4587-922e-a62c2d5edf57",
+        "text": "Which access modifier allows a member to be accessed only within its own class?",
+        "options": [
+          "public",
+          "protected",
+          "default (no modifier)",
+          "private"
+        ],
+        "correctOptionIndex": 3,
+        "solution": "The `private` access modifier allows a member to be accessed only within its own class.",
+        "notes": "`public` allows access from anywhere, `protected` allows access within the package and by subclasses, and `default` (package-private) allows access only within the same package."
+      },
+      {
+        "id": "8a5f7543-c24f-4c2e-b4d8-aa0557f918a4",
+        "text": "What keyword is used to refer to the current object in a method or constructor?",
+        "options": [
+          "super",
+          "this",
+          "self",
+          "instance"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `this` keyword is used to refer to the current object.",
+        "notes": "`this` can be used to differentiate between instance variables and local variables with the same name, or to call another constructor from within the same class."
+      },
+      {
+        "id": "bed74c4c-b42e-415d-8bf5-8be1a603f983",
+        "text": "Which concept describes the ability of an object to take on many forms?",
+        "options": [
+          "Inheritance",
+          "Encapsulation",
+          "Polymorphism",
+          "Abstraction"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "Polymorphism describes the ability of an object to take on many forms.",
+        "notes": "Polymorphism, meaning 'many forms', allows objects of different classes to be treated as objects of a common type (e.g., a superclass or interface). This is typically achieved through method overriding and interface implementation."
+      },
+      {
+        "id": "50839b16-f84c-41be-ad0e-8f1faced85d4",
+        "text": "What is the purpose of the `super` keyword in Java?",
+        "options": [
+          "To call a method of the current object.",
+          "To refer to the parent class object.",
+          "To create a new instance of a class.",
+          "To declare a static method."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `super` keyword is used to refer to the parent class (superclass) object.",
+        "notes": "`super` can be used to call a superclass's constructor (e.g., `super()`) or to access a superclass's members (methods or fields) that might be hidden or overridden in the subclass."
+      },
+      {
+        "id": "d4dd83ad-b812-4082-b595-c78ba3bd2ec8",
+        "text": "Which of the following statements about `String` objects in Java is true?",
+        "options": [
+          "String objects are mutable.",
+          "String objects are stored in the heap, but literals are optimized and often stored in the String Pool.",
+          "String objects can be modified using methods like `toUpperCase()`.",
+          "String objects are primitive data types."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "String objects are stored in the heap, and literals are often stored in the String Pool for optimization.",
+        "notes": "String objects are immutable. Methods like `toUpperCase()` return a new String object rather than modifying the original. `String` is a class, not a primitive."
+      },
+      {
+        "id": "36aad87f-4257-418f-8a29-654994610b25",
+        "text": "What happens if an exception is not caught in a Java program?",
+        "options": [
+          "The program continues execution normally.",
+          "The program terminates abruptly and prints a stack trace.",
+          "The JVM automatically handles it without affecting the program.",
+          "The method where the exception occurred will be skipped."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "If an exception is not caught, the program terminates abruptly and prints a stack trace.",
+        "notes": "An uncaught exception propagates up the call stack. If it reaches the `main` method and is still not caught, the JVM terminates the program and prints a detailed stack trace indicating where the exception occurred."
+      },
+      {
+        "id": "97e58f01-99b9-4ea2-9c60-fc0350fc1a3b",
+        "text": "Which block is guaranteed to execute whether an exception occurs or not in a `try-catch` block?",
+        "options": [
+          "catch",
+          "finally",
+          "throw",
+          "main"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `finally` block is guaranteed to execute whether an exception occurs or not.",
+        "notes": "The `finally` block is typically used for cleanup code, such as closing file streams or database connections, ensuring that resources are released regardless of whether an exception was thrown or caught."
+      },
+      {
+        "id": "f6bdb82d-629d-495e-97df-896b216c1f33",
+        "text": "Which interface should be implemented by a class whose instances are intended to be executed by a thread?",
+        "options": [
+          "Comparable",
+          "Serializable",
+          "Runnable",
+          "Cloneable"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The `Runnable` interface should be implemented by a class whose instances are intended to be executed by a thread.",
+        "notes": "Implementing `Runnable` allows an object to be executed as a separate thread. The `run()` method contains the code that will be executed by the thread. Alternatively, one can extend the `Thread` class, but implementing `Runnable` is generally preferred for better code organization and to allow the class to extend other classes."
+      },
+      {
+        "id": "77cfc7d3-1fc3-438b-aff0-95a22b534114",
+        "text": "What is method overloading in Java?",
+        "options": [
+          "Defining a method in a subclass with the same signature as a method in its superclass.",
+          "Defining multiple methods in the same class with the same name but different parameters.",
+          "Defining a method that throws multiple types of exceptions.",
+          "Defining a method that takes a variable number of arguments."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "Method overloading involves defining multiple methods in the same class with the same name but different parameters (different number or types of arguments).",
+        "notes": "Method overloading is a form of compile-time polymorphism. The return type can be the same or different, but the parameter list must be unique for each overloaded method. Option A describes method overriding."
+      },
+      {
+        "id": "610f86be-141f-4054-8303-604f5d665011",
+        "text": "Which collection class allows you to store unique elements and ensures insertion order is preserved?",
+        "options": [
+          "HashSet",
+          "TreeSet",
+          "LinkedHashSet",
+          "ArrayList"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "`LinkedHashSet` allows you to store unique elements and preserves the insertion order.",
+        "notes": "`HashSet` stores unique elements but does not guarantee order. `TreeSet` stores unique elements in sorted order. `ArrayList` allows duplicates and maintains insertion order, but it's a `List`, not a `Set`."
+      },
+      {
+        "id": "d7ceb1ce-abf4-4a28-9fb0-c7f9fa523b09",
+        "text": "What is the purpose of the `static` keyword when applied to a method?",
+        "options": [
+          "It makes the method an abstract method.",
+          "It allows the method to be called without creating an object of the class.",
+          "It prevents the method from being overridden by subclasses.",
+          "It ensures the method can only be accessed within its package."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "Applying the `static` keyword to a method allows it to be called without creating an object of the class.",
+        "notes": "Static methods belong to the class itself, not to any specific instance. They can only access static members (variables and methods) of the class directly. They cannot use `this` or `super`."
+      },
+      {
+        "id": "25c9ad82-c410-45cc-958a-4b4bb75fd1e7",
+        "text": "Which of the following is true about abstract classes in Java?",
+        "options": [
+          "They can be instantiated directly.",
+          "They cannot have constructors.",
+          "They must contain at least one abstract method.",
+          "They can have both abstract and concrete methods."
+        ],
+        "correctOptionIndex": 3,
+        "solution": "Abstract classes can have both abstract and concrete (implemented) methods.",
+        "notes": "Abstract classes cannot be instantiated directly (Option A is false). They can have constructors, which are called by subclasses (Option B is false). While they often have abstract methods, they are not required to have any (Option C is false, though if a class has any abstract methods, it must be declared abstract)."
+      },
+      {
+        "id": "a42a3844-47ff-4a27-8a7d-080b3d085557",
+        "text": "What is autoboxing in Java?",
+        "options": [
+          "The automatic conversion of a primitive type to its corresponding wrapper class object.",
+          "The automatic conversion of a wrapper class object to its corresponding primitive type.",
+          "The process of converting a String to an int.",
+          "The mechanism for creating new objects automatically."
+        ],
+        "correctOptionIndex": 0,
+        "solution": "Autoboxing is the automatic conversion of a primitive type to its corresponding wrapper class object.",
+        "notes": "For example, `Integer i = 10;` where `10` is an `int` primitive, is autoboxed into an `Integer` object. The reverse process, converting a wrapper object to a primitive, is called unboxing."
+      },
+      {
+        "id": "ce200cd5-9b9f-404f-aed6-87cb7c07cc05",
+        "text": "Which keyword is used to explicitly throw an exception?",
+        "options": [
+          "throws",
+          "thrown",
+          "throw",
+          "catch"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The `throw` keyword is used to explicitly throw an exception.",
+        "notes": "`throw` is used to instantiate and throw a single exception object. `throws` is used in a method signature to declare the types of checked exceptions that a method might throw."
+      },
+      {
+        "id": "488a1502-388b-4da4-b122-bad3e69f8f54",
+        "text": "What is the difference between `==` and `.equals()` when comparing two objects in Java?",
+        "options": [
+          "`==` compares the content of objects, `.equals()` compares memory addresses.",
+          "`==` compares memory addresses, `.equals()` compares content (if overridden).",
+          "Both `==` and `.equals()` always compare memory addresses.",
+          "Both `==` and `.equals()` always compare content."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "`==` compares memory addresses (references) of objects, while `.equals()` compares content, provided it has been overridden in the class.",
+        "notes": "For primitive types, `==` compares values. For objects, `==` checks if two references point to the exact same object in memory. The default implementation of `equals()` in `Object` also compares references, but it is commonly overridden in classes like `String`, `Integer`, etc., to compare the actual content."
+      },
+      {
+        "id": "3592bb66-0896-42d8-b100-309cee26d92c",
+        "text": "In Java, what does the term 'Garbage Collection' refer to?",
+        "options": [
+          "A process to clean up unused files on the hard drive.",
+          "A mechanism to reclaim memory occupied by objects that are no longer referenced.",
+          "A feature to automatically delete unused variables from the stack.",
+          "A tool for debugging memory leaks in an application."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "Garbage Collection is a mechanism to reclaim memory occupied by objects that are no longer referenced by the program.",
+        "notes": "Java's automatic garbage collection frees developers from manual memory management. It identifies objects that are unreachable and deallocates their memory, making it available for new objects."
+      },
+      {
+        "id": "b5eba7e2-ffa0-4ff5-ab96-db19a7c7b8f8",
+        "text": "Which of these is a correct declaration of a generic List that holds only String objects?",
+        "options": [
+          "List<Object> myList = new ArrayList<String>();",
+          "List<String> myList = new ArrayList();",
+          "List<String> myList = new ArrayList<String>();",
+          "List myList = new ArrayList<String>();"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The correct declaration for a generic List holding only String objects is `List<String> myList = new ArrayList<String>();`.",
+        "notes": "This uses generics (`<String>`) to specify the type of elements the list can hold, providing compile-time type safety. Option A is incorrect due to type incompatibility. Option B and D use raw types, which are discouraged as they lose type safety."
+      },
+      {
+        "id": "aa40216a-ed9e-4566-aee1-90562b5ff74e",
+        "text": "What is a 'checked exception' in Java?",
+        "options": [
+          "An exception that must be caught or declared in a method's `throws` clause.",
+          "An exception that is ignored by the compiler.",
+          "An exception that occurs due to programming errors like `NullPointerException`.",
+          "An exception that can only be thrown by the JVM."
+        ],
+        "correctOptionIndex": 0,
+        "solution": "A checked exception is an exception that must either be caught using a `try-catch` block or declared in the method's `throws` clause.",
+        "notes": "Checked exceptions are typically recoverable problems that a well-written application should anticipate and handle (e.g., `IOException`, `SQLException`). Unchecked exceptions (like `RuntimeException` and its subclasses) do not require explicit handling or declaration."
+      },
+      {
+        "id": "485b7a5d-7ddf-4738-87ce-0e79b3b98da0",
+        "text": "Which interface provides methods for creating a sequence of elements for functional operations like filter, map, and reduce?",
+        "options": [
+          "Collection",
+          "Iterable",
+          "Stream",
+          "List"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The `Stream` interface provides methods for creating a sequence of elements for functional operations.",
+        "notes": "Introduced in Java 8, the Stream API allows for functional-style operations on collections of objects. `Collection`, `Iterable`, and `List` are part of the Collections Framework for storing data, while `Stream` is for processing data."
+      },
+      {
+        "id": "51f422b7-9d40-481f-bc1d-b2e23823404b",
+        "text": "What is the purpose of the `volatile` keyword in Java?",
+        "options": [
+          "To make a variable constant.",
+          "To ensure that a variable's value is always read from main memory and not from a CPU cache.",
+          "To make a method synchronized.",
+          "To prevent a variable from being serialized."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `volatile` keyword ensures that a variable's value is always read from main memory and not from a CPU cache, guaranteeing visibility of changes across threads.",
+        "notes": "When a field is declared `volatile`, all reads and writes to it go directly to main memory, bypassing CPU caches. This is crucial in multithreaded environments to prevent stale data issues. It does not provide atomicity for compound operations."
+      },
+      {
+        "id": "9d961d18-dec4-4df6-8316-d70954c61163",
+        "text": "Which of the following is a functional interface?",
+        "options": [
+          "java.util.List",
+          "java.lang.Comparable",
+          "java.util.concurrent.Callable",
+          "java.io.Serializable"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "`java.util.concurrent.Callable` is a functional interface.",
+        "notes": "A functional interface is an interface with exactly one abstract method. `Callable` has a single `call()` method. `List` has many methods. `Comparable` has one method but is often not considered 'functional' in the Java 8+ context of lambda expressions, but `Callable` is designed for use with `ExecutorService` and lambdas."
+      },
+      {
+        "id": "0f04bdc0-58f3-434d-807a-be8edeb9a2a6",
+        "text": "What is a `Deadlock` in multithreading?",
+        "options": [
+          "When a thread repeatedly tries to acquire a lock that it already holds.",
+          "When a thread enters an infinite loop.",
+          "When two or more threads are blocked indefinitely, waiting for each other to release resources.",
+          "When a thread completes its execution successfully."
+        ],
+        "correctOptionIndex": 2,
+        "solution": "A `Deadlock` occurs when two or more threads are blocked indefinitely, waiting for each other to release the resources that they need.",
+        "notes": "Deadlocks are a common problem in concurrent programming. They typically arise when multiple threads need to acquire multiple locks, and they acquire them in different orders, leading to a circular dependency."
+      },
+      {
+        "id": "05a07a19-9bbf-4b38-95fc-f2c12cc314f8",
+        "text": "What does the `transient` keyword do in Java?",
+        "options": [
+          "It marks a variable as temporary, to be garbage collected quickly.",
+          "It prevents a field from being serialized when an object is written to a persistent storage.",
+          "It makes a variable accessible only within its package.",
+          "It declares a method that can be overridden by subclasses."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `transient` keyword prevents a field from being serialized when an object is written to a persistent storage.",
+        "notes": "When an object is serialized, its transient fields are not included in the byte stream. This is useful for sensitive data (like passwords) or data that can be recomputed or should not persist."
+      },
+      {
+        "id": "391e6f51-a54e-4f71-afa3-4912921659ed",
+        "text": "Which of the following is used to manage a pool of threads and submit tasks for asynchronous execution?",
+        "options": [
+          "ThreadGroup",
+          "Thread",
+          "ExecutorService",
+          "Semaphore"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "An `ExecutorService` is used to manage a pool of threads and submit tasks for asynchronous execution.",
+        "notes": "The `ExecutorService` framework (part of `java.util.concurrent`) provides a higher-level abstraction for managing threads than directly working with `Thread` objects. It simplifies concurrent programming by handling thread creation, reuse, and execution policies."
+      },
+      {
+        "id": "c90d739e-ec64-4733-8aa3-ed6e72ab8bd3",
+        "text": "What is the purpose of `Optional` class introduced in Java 8?",
+        "options": [
+          "To make a variable optional for initialization.",
+          "To provide a container object that may or may not contain a non-null value, helping to avoid `NullPointerException`.",
+          "To create an optional field in a class.",
+          "To allow methods to return multiple values."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `Optional` class is a container object that may or may not contain a non-null value, primarily used to avoid `NullPointerException` and promote more readable code.",
+        "notes": "`Optional` encourages a more functional approach to handling potential null values by forcing the developer to explicitly deal with the presence or absence of a value."
+      },
+      {
+        "id": "d4c8463f-22e4-4678-8266-4ddb17b24f34",
+        "text": "Which of these `Stream` operations is terminal?",
+        "options": [
+          "filter()",
+          "map()",
+          "peek()",
+          "collect()"
+        ],
+        "correctOptionIndex": 3,
+        "solution": "The `collect()` operation is a terminal operation in Java Streams.",
+        "notes": "Terminal operations initiate the processing of the stream pipeline and produce a result or a side-effect. `filter()`, `map()`, and `peek()` are intermediate operations, which transform the stream but do not produce a final result until a terminal operation is called."
+      },
+      {
+        "id": "577a5fd8-72ad-4109-85af-a0bdb8d55052",
+        "text": "What is the primary benefit of using `try-with-resources` statement?",
+        "options": [
+          "It makes exception handling optional.",
+          "It automatically closes resources (like streams) that implement `AutoCloseable` interface.",
+          "It allows catching multiple exceptions in a single `catch` block.",
+          "It prevents `NullPointerException` from occurring."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The primary benefit of `try-with-resources` is that it automatically closes resources (like streams, readers, writers, connections) that implement the `java.lang.AutoCloseable` interface.",
+        "notes": "Introduced in Java 7, `try-with-resources` simplifies resource management by ensuring that resources are closed automatically and safely, even if exceptions occur. This helps prevent resource leaks."
+      },
+      {
+        "id": "82784d6f-e9b7-4295-8185-52dcfa5591f7",
+        "text": "Which mechanism allows a Java program to inspect and modify its own structure and behavior at runtime?",
+        "options": [
+          "Serialization",
+          "Reflection API",
+          "Generics",
+          "Annotations"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The Reflection API allows a Java program to inspect and modify its own structure and behavior at runtime.",
+        "notes": "Reflection enables programs to examine classes, interfaces, fields, and methods at runtime, and even to invoke methods or access fields dynamically. It's often used in frameworks (like Spring, Hibernate) but can come with performance overhead and security implications."
+      },
+      {
+        "id": "633decd0-757f-4c3c-8bca-f6f6a9b4ca8a",
+        "text": "What is the purpose of the `synchronized` keyword in Java?",
+        "options": [
+          "To make a method execute faster.",
+          "To prevent a class from being subclassed.",
+          "To ensure that only one thread can execute a block of code or method at a time.",
+          "To allow multiple threads to access a shared resource simultaneously."
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The `synchronized` keyword is used to ensure that only one thread can execute a block of code or method at a time, preventing race conditions in multithreaded environments.",
+        "notes": "Synchronization provides mutual exclusion. When a thread enters a synchronized block or method, it acquires a lock on the object (for instance methods/blocks) or the class (for static methods/blocks), preventing other threads from entering the same synchronized region until the lock is released."
+      },
+      {
+        "id": "b41dd67c-f8fe-4d71-97fe-37224918c685",
+        "text": "Which of these is a valid way to create an immutable list in Java 9+?",
+        "options": [
+          "List<String> list = new ArrayList<String>().add(\"A\").add(\"B\");",
+          "List<String> list = List.of(\"A\", \"B\");",
+          "List<String> list = Collections.unmodifiableList(new ArrayList<String>());",
+          "List<String> list = new ImmutableList<String>(\"A\", \"B\");"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "In Java 9+, `List.of(\"A\", \"B\")` is a valid and convenient way to create an immutable list.",
+        "notes": "The `List.of()`, `Set.of()`, and `Map.of()` factory methods were introduced in Java 9 to create concisely immutable collections. Option C creates a view of an existing list that cannot be modified, but the underlying list could still be modified if accessible. Option A is incorrect syntax. Option D assumes a non-standard `ImmutableList` class."
+      },
+      {
+        "id": "97d9052a-5d28-473b-9a1a-64707fdf1af8",
+        "text": "What is the correct way to define a lambda expression that takes two integers and returns their sum?",
+        "options": [
+          "(int a, int b) -> return a + b;",
+          "(a, b) -> a + b;",
+          "function(a, b) { return a + b; }",
+          "sum(a, b) -> a + b;"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The correct way to define a lambda expression that takes two integers and returns their sum is `(a, b) -> a + b;`.",
+        "notes": "For a single expression body, the `return` keyword and curly braces are optional. The type inference allows `int` to be omitted if the context provides it (e.g., if assigned to a `BiFunction<Integer, Integer, Integer>`)."
+      },
+      {
+        "id": "646cdf7c-3810-4e53-a3db-c248e988eaff",
+        "text": "What is the purpose of the `ExecutorService.shutdown()` method?",
+        "options": [
+          "To immediately terminate all running tasks and stop the service.",
+          "To stop accepting new tasks and allow previously submitted tasks to complete.",
+          "To pause the execution of tasks temporarily.",
+          "To remove all tasks from the queue without execution."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `ExecutorService.shutdown()` method stops the service from accepting new tasks and allows previously submitted tasks to complete their execution.",
+        "notes": "It doesn't terminate running tasks immediately. For immediate termination, `shutdownNow()` can be used, which attempts to stop all actively executing tasks, halts the processing of waiting tasks, and returns a list of the tasks that were awaiting execution."
+      },
+      {
+        "id": "a3e8959b-a277-4252-ae52-8d3c36ab6aef",
+        "text": "Which statement about Java's `interface` is true (Java 8+)?",
+        "options": [
+          "An interface can have concrete methods, but they must be declared `static`.",
+          "An interface can have concrete methods, but they must be declared `default` or `static`.",
+          "An interface can only have abstract methods.",
+          "An interface can extend a class."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "In Java 8 and later, an interface can have concrete methods, but they must be declared `default` or `static`.",
+        "notes": "Java 8 introduced default methods (instance methods with implementation) and static methods in interfaces. This allows adding new methods to interfaces without breaking existing implementations. Option C was true before Java 8. Option A is incomplete. Option D is incorrect; interfaces can only extend other interfaces."
+      },
+      {
+        "id": "03d9cb11-4cc8-4a6a-bd0a-dfba8ac27c35",
+        "text": "What is the output of the following code?\n```java\nInteger a = 100;\nInteger b = 100;\nInteger c = 200;\nInteger d = 200;\nSystem.out.println(a == b);\nSystem.out.println(c == d);\n```",
+        "options": [
+          "true\ntrue",
+          "true\nfalse",
+          "false\ntrue",
+          "false\nfalse"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The output will be `true` then `false`.",
+        "notes": "Java caches `Integer` objects for values between -128 and 127 (inclusive). So, `a` and `b` refer to the same cached `Integer` object, resulting in `true`. For values outside this range (like 200), new `Integer` objects are created, so `c` and `d` refer to different objects, resulting in `false` when compared with `==` (which compares references)."
+      },
+      {
+        "id": "932c0467-ab40-4684-b969-bb93880e0077",
+        "text": "Which annotation is used to mark a method that overrides a method from a superclass or implements a method from an interface?",
+        "options": [
+          "@Deprecated",
+          "@Override",
+          "@FunctionalInterface",
+          "@SuppressWarnings"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `@Override` annotation is used to mark a method that overrides a method from a superclass or implements a method from an interface.",
+        "notes": "It's a marker annotation that helps the compiler check if the method indeed overrides something. If the method signature doesn't match a superclass method or interface method, the compiler will generate an error, preventing subtle bugs."
+      },
+      {
+        "id": "080cd3f9-709d-43c4-b052-8d0173d696c9",
+        "text": "What is the purpose of the `java.nio.file.Path` interface?",
+        "options": [
+          "To represent a network path for remote connections.",
+          "To provide an object-oriented way to represent a file or directory path.",
+          "To define a path for class loading in the JVM.",
+          "To manage HTTP request paths in web applications."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `java.nio.file.Path` interface provides an object-oriented way to represent a file or directory path, offering more robust and platform-independent file system operations than `java.io.File`.",
+        "notes": "Introduced in Java 7 as part of NIO.2, `Path` is a central component for modern file I/O operations, working in conjunction with the `Files` class."
+      },
+      {
+        "id": "6c852225-8873-4938-a9af-77f2dcb6b2a1",
+        "text": "Which design pattern is commonly used for creating objects without specifying the exact class of object that will be created?",
+        "options": [
+          "Singleton Pattern",
+          "Observer Pattern",
+          "Factory Method Pattern",
+          "Decorator Pattern"
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The Factory Method Pattern is commonly used for creating objects without specifying the exact class of object that will be created.",
+        "notes": "It defines an interface for creating an object, but lets subclasses decide which class to instantiate. This pattern promotes loose coupling. Singleton ensures only one instance. Observer defines a one-to-many dependency. Decorator adds responsibilities to objects dynamically."
+      },
+      {
+        "id": "fc6eddec-b6ae-44af-9997-af52edd3a19f",
+        "text": "What is type erasure in Java Generics?",
+        "options": [
+          "The process where generic type information is removed during compilation and replaced with raw types or their upper bounds.",
+          "The process of converting generic types to primitive types at runtime.",
+          "A compile-time error that occurs when generic types are misused.",
+          "A feature that allows generic types to be used with primitive data types directly."
+        ],
+        "correctOptionIndex": 0,
+        "solution": "Type erasure is the process where generic type information is removed during compilation and replaced with raw types or their upper bounds (e.g., `Object` or a specific class).",
+        "notes": "This mechanism ensures backward compatibility with older Java versions that did not support generics. It means that at runtime, generic types like `List<String>` become `List`, and the type checking is primarily done at compile time."
+      },
+      {
+        "id": "1a5d1b2f-bc37-43d7-a41a-4f9bc081908b",
+        "text": "What is the purpose of the `CountDownLatch` class in `java.util.concurrent`?",
+        "options": [
+          "To allow a fixed number of threads to access a shared resource concurrently.",
+          "To provide a way for one or more threads to wait until a set of operations being performed in other threads completes.",
+          "To ensure that threads execute in a specific order.",
+          "To manage a pool of reusable threads."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `CountDownLatch` class provides a way for one or more threads to wait until a set of operations being performed in other threads completes.",
+        "notes": "It's initialized with a count. Threads call `countDown()` when they complete their work. A waiting thread calls `await()` and blocks until the count reaches zero. It's a one-shot phenomenon; the count cannot be reset."
+      },
+      {
+        "id": "abb02e82-46bf-4f5d-b20b-9509f87efb54",
+        "text": "Which of these is NOT a characteristic of a `Record` in Java (Java 16+)?",
+        "options": [
+          "It automatically generates `equals()`, `hashCode()`, and `toString()` methods.",
+          "It is implicitly `final` and cannot extend any other class.",
+          "It can declare additional instance fields and methods beyond its components.",
+          "Its components are implicitly `final`."
+        ],
+        "correctOptionIndex": 2,
+        "solution": "A `Record` cannot declare additional instance fields beyond its components.",
+        "notes": "Records are designed as transparent carriers for immutable data. They are implicitly `final` (cannot be subclassed) and implicitly extend `java.lang.Record`. Their components are implicitly `final` (Option D is true). They can declare static fields and static methods, and instance methods that operate on their components, but no additional instance fields (Option C is false)."
+      },
+      {
+        "id": "0f50138d-46e2-41d7-bf3c-be6dd61bc2b0",
+        "text": "What is the `java.lang.instrument` package primarily used for?",
+        "options": [
+          "Performing musical instrument simulations.",
+          "Allowing agents to 'instrument' programs running on the JVM by transforming class files.",
+          "Providing tools for network communication.",
+          "Managing database connections and transactions."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `java.lang.instrument` package is primarily used for allowing agents to 'instrument' programs running on the JVM by transforming class files, typically for monitoring, profiling, or debugging purposes.",
+        "notes": "It provides mechanisms to add bytecode instrumentation to Java applications. This is a powerful feature often used by APM (Application Performance Monitoring) tools and profilers."
+      },
+      {
+        "id": "c03a1b61-29d9-421b-99eb-d45b38c153bb",
+        "text": "Which of the following best describes the purpose of the Java Platform Module System (JPMS) introduced in Java 9?",
+        "options": [
+          "To enable faster compilation of Java code.",
+          "To provide a standard for creating web services.",
+          "To modularize the Java SE Platform and improve application encapsulation, reliability, and performance.",
+          "To manage dependencies for third-party libraries."
+        ],
+        "correctOptionIndex": 2,
+        "solution": "The Java Platform Module System (JPMS) was introduced in Java 9 to modularize the Java SE Platform itself and to improve application encapsulation, reliability, and performance.",
+        "notes": "It introduces the concept of modules, which are named, self-describing collections of code and data. Modules explicitly declare what they export and what they require, leading to stronger encapsulation and more reliable applications (e.g., smaller runtime images through `jlink`)."
+      },
+      {
+        "id": "0ddebd9b-8522-4544-91f0-ea63ad8dae0a",
+        "text": "In JDBC, what is the role of the `Statement` interface?",
+        "options": [
+          "To represent a connection to a database.",
+          "To execute static SQL statements and return the results.",
+          "To manage transactions within the database.",
+          "To define the structure of a database table."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "In JDBC, the `Statement` interface is used to execute static SQL statements and return the results.",
+        "notes": "For parameterized SQL statements or stored procedures, `PreparedStatement` and `CallableStatement` interfaces are used, which offer better performance and security (prevention of SQL injection) respectively."
+      },
+      {
+        "id": "c835970d-fe67-425a-bf1b-56790d9f5fb3",
+        "text": "Which Java feature allows you to define a block of code that executes when an object is created, before the constructor is called?",
+        "options": [
+          "Static initializer block",
+          "Instance initializer block",
+          "Finalizer method",
+          "Anonymous inner class"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "An instance initializer block (also known as an instance initialization block) is a block of code that executes when an object is created, before the constructor is called.",
+        "notes": "It's useful for initializing instance variables common to all constructors of a class. Static initializer blocks (`static {}`) execute when the class is loaded. Finalizers are deprecated and not guaranteed to run. Anonymous inner classes are for creating one-time objects."
+      },
+      {
+        "id": "f788bc74-e3a4-4cce-afc7-9b2b53174aaa",
+        "text": "What is a `CyclicBarrier` in `java.util.concurrent`?",
+        "options": [
+          "A synchronization aid that allows a set of threads to all wait for each other to reach a common barrier point.",
+          "A mechanism to prevent an object from being garbage collected.",
+          "A lock that can be held by multiple threads concurrently.",
+          "A way to control the rate at which tasks are submitted to an `ExecutorService`."
+        ],
+        "correctOptionIndex": 0,
+        "solution": "A `CyclicBarrier` is a synchronization aid that allows a set of threads to all wait for each other to reach a common barrier point.",
+        "notes": "Unlike `CountDownLatch`, `CyclicBarrier` can be reset and reused multiple times, making it suitable for scenarios where a group of threads needs to repeatedly wait for each other at different stages of a computation. It can also execute a barrier action when the barrier is tripped."
+      },
+      {
+        "id": "a7d31506-54e6-4f50-9f8f-3bc4bf96ef85",
+        "text": "Which of the following is true regarding `default` methods in Java interfaces?",
+        "options": [
+          "They must be implemented by all classes that implement the interface.",
+          "They can be overridden by implementing classes.",
+          "They cannot access instance variables of the implementing class.",
+          "They are implicitly `static`."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "Default methods in Java interfaces can be overridden by implementing classes.",
+        "notes": "Default methods provide a default implementation that implementing classes inherit. Classes can choose to use this default implementation or provide their own override. They are not implicitly `static` (Option D is false) and can access instance variables of the implementing class through `this` (Option C is false). They do not *have* to be implemented (Option A is false)."
+      },
+      {
+        "id": "4c6df21d-24d6-4b3d-a960-c9c462059190",
+        "text": "What is the purpose of the `ForkJoinPool` in Java's concurrency utilities?",
+        "options": [
+          "To manage a fixed number of threads for I/O-bound tasks.",
+          "To execute tasks that can be split into smaller subtasks recursively and then join their results.",
+          "To provide a thread pool for scheduled tasks at a fixed rate.",
+          "To manage database connection pooling."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `ForkJoinPool` is designed to execute tasks that can be split into smaller subtasks recursively (fork) and then join their results (join), making it suitable for divide-and-conquer algorithms.",
+        "notes": "It's an implementation of `ExecutorService` that efficiently utilizes available processor cores by employing a work-stealing algorithm. It's often used with `ForkJoinTask` (like `RecursiveTask` or `RecursiveAction`)."
+      },
+      {
+        "id": "8f2ee117-e61e-4ac4-a289-a54c11bbde90",
+        "text": "Which `Stream` operation would you use to transform elements from one type to another?",
+        "options": [
+          "filter()",
+          "map()",
+          "reduce()",
+          "forEach()"
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The `map()` Stream operation is used to transform elements from one type to another.",
+        "notes": "`map()` applies a function to each element of the stream, producing a new stream of the results. `filter()` selects elements based on a predicate. `reduce()` combines elements into a single result. `forEach()` performs an action for each element (a terminal operation)."
+      },
+      {
+        "id": "cf59b6a6-bb8d-4c02-95a5-bd61ec20bbf8",
+        "text": "What is the difference between `ArrayList` and `LinkedList` in Java?",
+        "options": [
+          "`ArrayList` is synchronized, `LinkedList` is not.",
+          "`ArrayList` provides random access and is generally faster for element access, while `LinkedList` is generally faster for insertions/deletions in the middle.",
+          "`ArrayList` stores elements in sorted order, `LinkedList` does not.",
+          "`ArrayList` can store null values, `LinkedList` cannot."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "`ArrayList` provides random access (O(1) for `get(index)`) and is generally faster for element access, while `LinkedList` is generally faster for insertions/deletions in the middle (O(1) after finding the position) but slower for random access (O(n)).",
+        "notes": "`ArrayList` is based on a dynamic array, while `LinkedList` is based on a doubly linked list. Both are not synchronized. Neither guarantees sorted order by default. Both can store null values."
+      },
+      {
+        "id": "cc890d86-5d4f-4a6a-a274-797208a42bb9",
+        "text": "Which of these is a correct statement about `CompletableFuture` (Java 8+)?",
+        "options": [
+          "It is used for synchronous programming to block execution until a result is available.",
+          "It represents a stage in an asynchronous computation that can be explicitly completed or completed by a function.",
+          "It is a replacement for the `Thread` class.",
+          "It is exclusively used for database operations."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "`CompletableFuture` represents a stage in an asynchronous computation that can be explicitly completed or completed by a function, allowing for powerful composable asynchronous programming.",
+        "notes": "It extends `Future` and provides a rich API for chaining dependent asynchronous tasks, handling errors, and combining results from multiple futures. It is a key component for non-blocking, reactive programming in Java."
+      },
+      {
+        "id": "a42f2a5c-7a32-4f14-b471-70166ab13fd4",
+        "text": "What is the primary role of a `ServiceLoader` in Java?",
+        "options": [
+          "To load classes from the file system at runtime.",
+          "To discover and load implementations of a service interface at runtime.",
+          "To manage the lifecycle of Java EE services.",
+          "To optimize the loading of static resources in a web application."
+        ],
+        "correctOptionIndex": 1,
+        "solution": "The primary role of a `ServiceLoader` is to discover and load implementations of a service interface at runtime, based on configuration files.",
+        "notes": "It's part of the Java's Service Provider Interface (SPI) mechanism. Providers register their implementations in `META-INF/services` directory, and `ServiceLoader` can then find and instantiate them. This promotes extensibility and loose coupling."
+      }
+    ],
+    "createdAt": 1791287150504,
+    "progress": {
+      "currentIndex": 2,
+      "selectedOptions": {
+        "0": 1,
+        "1": 2
+      },
+      "showNotes": {}
+    },
+    "sharePin": "RRFGMQ"
+  }
+}

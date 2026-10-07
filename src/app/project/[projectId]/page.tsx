@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState, use } from "react";
-import { Storage, Project, MCQSet } from "@/lib/storage";
+import { DB, Project, MCQSet } from "@/lib/db";
 import Link from "next/link";
-import { FileQuestion, Plus, ArrowLeft, Share2 } from "lucide-react";
+import { FileQuestion, Plus, ArrowLeft, Share2, Loader2, Trophy, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export default function ProjectPage({ params }: { params: Promise<{ projectId: string }> }) {
@@ -11,93 +11,140 @@ export default function ProjectPage({ params }: { params: Promise<{ projectId: s
   const { projectId } = use(params);
   const [project, setProject] = useState<Project | null>(null);
   const [mcqSets, setMcqSets] = useState<MCQSet[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const projs = Storage.getProjects();
-    const p = projs.find((p) => p.id === projectId);
+  const fetchProjectData = async () => {
+    setLoading(true);
+    const p = await DB.getProject(projectId);
     if (!p) {
       router.push("/");
       return;
     }
     setProject(p);
-    setMcqSets(Storage.getMCQSets(projectId));
+    const sets = await DB.getMCQSets(projectId);
+    setMcqSets(sets);
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    fetchProjectData();
   }, [projectId, router]);
 
-  const generatePin = (setId: string) => {
-    const set = Storage.getMCQSet(setId);
-    if (!set) return;
-    
-    // Generate random 6 character alphanumeric PIN
-    const pin = Math.random().toString(36).substring(2, 8).toUpperCase();
-    const updatedSet = { ...set, sharePin: pin };
-    
-    Storage.saveMCQSet(updatedSet);
-    setMcqSets(Storage.getMCQSets(projectId));
+  const [isSharing, setIsSharing] = useState<Record<string, boolean>>({});
+
+  const generatePin = async (setId: string, currentPin?: string) => {
+    setIsSharing(prev => ({ ...prev, [setId]: true }));
+    try {
+      const pin = currentPin || Math.random().toString(36).substring(2, 8).toUpperCase();
+      await DB.updateMCQSetPin(setId, pin);
+      fetchProjectData();
+    } catch (e) {
+      console.error("Failed to generate PIN", e);
+    } finally {
+      setIsSharing(prev => ({ ...prev, [setId]: false }));
+    }
   };
+
+  if (!project && loading) {
+    return (
+      <div className="min-h-screen bg-[#f8f9fc] flex justify-center items-center">
+        <Loader2 className="animate-spin text-blue-600" size={32} />
+      </div>
+    );
+  }
 
   if (!project) return null;
 
   return (
-    <div className="min-h-screen bg-[#faf9f8] text-gray-900 font-sans">
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
-        <Link href="/" className="text-gray-500 hover:text-gray-800 transition-colors">
-          <ArrowLeft size={20} />
-        </Link>
-        <h1 className="text-xl font-semibold text-gray-800">{project.name}</h1>
+    <div className="min-h-screen bg-[#f8f9fc] text-gray-900 font-sans text-[13px]">
+      <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between sticky top-0 z-50">
+        <div className="flex items-center gap-3">
+          <Link href="/" className="p-1 hover:bg-gray-100 rounded-sm text-gray-500 hover:text-gray-800 transition-colors">
+            <ArrowLeft size={16} />
+          </Link>
+          <div className="h-4 w-[1px] bg-gray-200 mx-1"></div>
+          <h1 className="text-[15px] font-bold text-gray-800">{project.name}</h1>
+        </div>
       </header>
 
-      <div className="w-full px-6 py-8">
+      <div className="w-full max-w-5xl mx-auto px-6 py-6">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-lg font-semibold text-gray-800">Question Sets</h2>
+          <h2 className="text-lg font-bold text-gray-900">Question Sets</h2>
           <Link
             href={`/project/${project.id}/create`}
-            className="bg-[#0067b8] hover:bg-[#005da6] text-white px-4 py-2 rounded-sm text-sm font-medium flex items-center gap-2 transition-colors shadow-sm"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-sm text-[13px] font-semibold flex items-center gap-1.5 transition-colors shadow-sm"
           >
-            <Plus size={16} /> New Question Set
+            <Plus size={14} /> New Set
           </Link>
         </div>
 
         <section>
           {mcqSets.length === 0 ? (
-            <div className="text-center py-16 text-gray-500 bg-white shadow-sm rounded-sm border border-gray-200 border-dashed">
-              <FileQuestion size={40} className="mx-auto mb-3 text-gray-300" />
-              <p className="text-base font-medium">No MCQ sets created yet.</p>
-              <p className="text-sm mt-1 text-gray-400">Click the button above to generate some questions.</p>
+            <div className="text-center py-16 bg-white shadow-sm rounded-md border border-gray-200 border-dashed">
+              <div className="bg-blue-50 w-12 h-12 rounded-sm flex items-center justify-center mx-auto mb-3">
+                <FileQuestion size={24} className="text-blue-600" />
+              </div>
+              <p className="text-[15px] font-bold text-gray-900">No question sets yet.</p>
+              <p className="text-[13px] mt-1 text-gray-500 max-w-sm mx-auto">Create a new set by providing a topic and letting AI generate the questions.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {mcqSets.map((set) => (
-                <div key={set.id} className="bg-white border border-gray-200 p-5 rounded-sm shadow-sm flex flex-col hover:shadow-md transition-shadow relative group">
+                <div key={set.id} className="bg-white border border-gray-200 rounded-md shadow-sm flex flex-col hover:border-blue-300 transition-colors relative group overflow-hidden">
                   
-                  {/* Share PIN Section */}
-                  <div className="absolute top-4 right-4">
-                    {set.sharePin ? (
-                      <div className="bg-gray-100 border border-gray-200 text-gray-800 text-xs font-bold px-2 py-1 rounded-sm shadow-sm font-mono tracking-widest flex items-center gap-1 cursor-help" title="Share this PIN with others">
-                        PIN: {set.sharePin}
-                      </div>
-                    ) : (
-                      <button
-                        onClick={() => generatePin(set.id)}
-                        className="text-gray-400 hover:text-[#0067b8] transition-colors p-1"
-                        title="Generate Share PIN"
-                      >
-                        <Share2 size={16} />
-                      </button>
-                    )}
-                  </div>
+                  {/* Decorative Header */}
+                  <div className="h-1.5 w-full bg-gradient-to-r from-blue-400 to-indigo-500"></div>
 
-                  <h3 className="text-base font-semibold mb-2 text-gray-800 pr-16">{set.title}</h3>
-                  <div className="text-xs text-gray-500 mb-4 space-y-1.5 flex-1">
-                    <p><span className="font-medium text-gray-700">Topic:</span> {set.topic}</p>
-                    <p><span className="font-medium text-gray-700">Level:</span> <span className="capitalize">{set.level}</span></p>
-                    <p><span className="font-medium text-gray-700">Count:</span> {set.count} questions</p>
+                  <div className="p-5 flex-1 flex flex-col">
+                    {/* Share PIN Section */}
+                    <div className="absolute top-5 right-5 flex items-center gap-2">
+                      {set.share_pin ? (
+                        <div className="bg-indigo-50 border border-indigo-100 text-indigo-700 text-[11px] font-bold px-2 py-1 rounded-sm shadow-sm font-mono tracking-widest cursor-help">
+                          PIN: {set.share_pin}
+                        </div>
+                      ) : (
+                        <button
+                          onClick={() => generatePin(set.id)}
+                          disabled={isSharing[set.id]}
+                          className="bg-gray-50 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 border border-gray-200 hover:border-indigo-200 transition-colors px-2 py-1 rounded-sm text-[11px] font-bold flex items-center gap-1 shadow-sm disabled:opacity-50"
+                        >
+                          {isSharing[set.id] ? <Loader2 size={12} className="animate-spin" /> : <Share2 size={12} />} Share
+                        </button>
+                      )}
+                    </div>
+
+                    <h3 className="text-[15px] font-bold mb-3 text-gray-900 pr-20 leading-tight line-clamp-2" title={set.title}>{set.title}</h3>
+                    
+                    <div className="space-y-1.5 mb-5 flex-1 border-t border-gray-100 pt-3">
+                      <div className="flex items-center justify-between text-[12px]">
+                        <span className="font-semibold text-gray-500">Topic</span>
+                        <span className="text-gray-800 font-medium truncate max-w-[150px]">{set.topic}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-[12px]">
+                        <span className="font-semibold text-gray-500">Level</span>
+                        <span className={`font-bold px-1.5 py-0.5 rounded-sm capitalize ${set.level.toLowerCase().includes('hard') ? 'bg-red-50 text-red-700' : set.level.toLowerCase().includes('medium') ? 'bg-yellow-50 text-yellow-700' : 'bg-green-50 text-green-700'}`}>{set.level}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-[12px]">
+                        <span className="font-semibold text-gray-500">Count</span>
+                        <span className="text-gray-800 font-medium">{set.count} Qs</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-2">
+                      <Link
+                        href={`/project/${project.id}/set/${set.id}`}
+                        className="flex-1 bg-white hover:bg-gray-50 text-gray-700 px-3 py-2 rounded-sm text-[12px] font-bold flex justify-center items-center gap-1 transition-colors border border-gray-200 shadow-sm"
+                      >
+                        Details
+                      </Link>
+                      <Link
+                        href={`/solve/${set.id}`}
+                        className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-sm text-[12px] font-bold flex justify-center items-center gap-1.5 transition-colors shadow-sm"
+                      >
+                        <Trophy size={14} /> Compete
+                      </Link>
+                    </div>
                   </div>
-                  <Link
-                    href={`/project/${project.id}/set/${set.id}`}
-                    className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-2 rounded-sm text-sm font-medium flex justify-center items-center gap-2 transition-colors border border-gray-200"
-                  >
-                    <FileQuestion size={16} /> View Questions
-                  </Link>
                 </div>
               ))}
             </div>
